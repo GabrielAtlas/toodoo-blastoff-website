@@ -1,0 +1,11 @@
+{
+  "name": "toodoo-blastoff-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch ./sass:public/stylesheets"
+  },
+  "author": "Gabriel, Lucas",
+  "license": "ISC"
+}
