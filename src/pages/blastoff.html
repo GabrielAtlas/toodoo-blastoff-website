@@ -10,7 +10,7 @@
   <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-blue overflow-hidden">
+<body class="bg-blue overflow-x-hidden overflow-y-scroll page-blastoff">
   <header class="header">
     <section class="fixed-top">
       <section class="bg-magenta container-fluid">
@@ -111,11 +111,41 @@
       </section>
     </section>
   </header>
-  <main class="">
-    <section class=" min-vh-100 light-orbs">
-      <div class="text-center mb-5">
-        <p class="fs-headline-lg color-magenta fw-bold">O programa</p>
-        <h2 class="fs-display-md text-white text-uppercase fw-medium m-0">BlastOff</h2>
+  <main class="main">
+    <section class="light-orbs">
+      <div class="container">
+        <div class="text-center">
+          <p class="fs-headline-lg color-magenta fw-bold">O programa</p>
+          <h2 class="fs-display-md text-white text-uppercase fw-medium m-0">BlastOff</h2>
+        </div>
+        <figure class="rocket-animation d-flex align-items-center justify-content-center m-0 mx-auto text-center w-100 my-5">
+          <img class="w-100 object-fit-contain" src="../public/assets/gifs/rocket_animation.gif" alt="rocker">
+        </figure>
+        <div>
+          <p class="scroll-down-text text-center text-white text-uppercase mb-4">
+            Scroll down
+          </p>
+          <figure class="scroll-down-button">
+            <img class="w-100" src="../public/assets/icons/arrow-bottom-scrolldown.svg" alt="down">
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section-information">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="text-white w-50">
+          <h2 class="text-container fs-display-lg mb-3">
+            trabalhamos <br> hoje mirando o <span class="color-magenta">amanhã</span>
+          </h2>
+          <p class="text-container fs-title-lg fw-bold">
+            E foi com esse pensamento que nasceu o programa <span class="color-light-blue">BlastOff</span> que tem como objetivo a preparação de jovens para serem os mais novos programadores e desenvolvedores no furturo! Quer saber mais? Acompanhe!
+          </p>
+        </div>
+        <div>
+          <figure>
+            <img src="../public/assets/images/rocket.svg" alt="">
+          </figure>
+        </div>
       </div>
     </section>
   </main>

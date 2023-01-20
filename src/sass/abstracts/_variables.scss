@@ -2,6 +2,7 @@
 $font-primary: "ubuntu", sans-serif;
 $map-colors: (
   "blue": #090d68,
+  "light-blue": #00eabd,
   "magenta": #ea005a,
 );
 
@@ -76,5 +77,40 @@ body {
     right: 0;
     top: 0%;
     transform: translate(39%, -40%);
+  }
+}
+
+.scroll-down-text {
+  font-weight: 300;
+  letter-spacing: 0.4em;
+}
+.scroll-down-button {
+  @include square(74px);
+  align-items: center;
+  border-radius: 100%;
+  border: solid 3px #fff;
+  cursor: pointer;
+  display: flex !important;
+  justify-content: center;
+  margin: auto;
+  & > img {
+    display: block;
+    max-width: 25px;
+    transform: translateY(3px);
+  }
+}
+
+.page-blastoff {
+  & .main {
+    & .rocket-animation {
+      max-height: 388px;
+      max-width: 640px;
+      overflow: hidden;
+    }
+    & .section-information {
+      .text-container {
+        max-width: 520px;
+      }
+    }
   }
 }
