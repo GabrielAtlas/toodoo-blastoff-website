@@ -26,6 +26,21 @@ body {
   color: #ea005a;
 }
 
+.light-orbs::before, .light-orbs::after {
+  height: 584px;
+  width: 584px;
+  background-color: #ea005a;
+  border-radius: 50%;
+  filter: blur(300px);
+  opacity: 0.2;
+  position: absolute;
+}
+
+.light-orbs, .light-orbs::before, .light-orbs::after {
+  content: "";
+  display: block;
+}
+
 .font-display-lg {
   font-size: 60px;
 }
@@ -48,6 +63,20 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.light-orbs {
+  position: relative;
+}
+.light-orbs::after {
+  left: 0;
+  top: 50%;
+  transform: translate(-39%, -50%);
+}
+.light-orbs::before {
+  right: 0;
+  top: 0%;
+  transform: translate(39%, -40%);
 }
 
 /*

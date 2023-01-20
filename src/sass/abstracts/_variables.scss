@@ -1,3 +1,4 @@
+// maps
 $font-primary: "ubuntu", sans-serif;
 $map-colors: (
   "blue": #090d68,
@@ -8,10 +9,12 @@ $map-colors-keys: map-keys(
   $map: $map-colors,
 );
 
+// tags
 body {
   font-family: $font-primary;
 }
 
+// loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {
     background-color: map-get($map: $map-colors, $key: $key);
@@ -21,6 +24,23 @@ body {
   }
 }
 
+//placeholder
+%page-orbs {
+  @extend %pseudo-element;
+  @include square(584px);
+  background-color: map-get($map: $map-colors, $key: "magenta");
+  border-radius: 50%;
+  filter: blur(300px);
+  opacity: 0.2;
+  position: absolute;
+}
+
+%pseudo-element {
+  content: "";
+  display: block;
+}
+
+//classes
 .font-display-lg {
   font-size: 60px;
 }
@@ -39,4 +59,22 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.light-orbs {
+  position: relative;
+
+  @extend %pseudo-element;
+  &::after {
+    @extend %page-orbs;
+    left: 0;
+    top: 50%;
+    transform: translate(-39%, -50%);
+  }
+  &::before {
+    @extend %page-orbs;
+    right: 0;
+    top: 0%;
+    transform: translate(39%, -40%);
+  }
 }
