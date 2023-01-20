@@ -17,10 +17,10 @@ body {
 // loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {
-    background-color: map-get($map: $map-colors, $key: $key);
+    background-color: map-get($map: $map-colors, $key: $key) !important;
   }
   .color-#{$key} {
-    color: map-get($map: $map-colors, $key: $key);
+    color: map-get($map: $map-colors, $key: $key) !important;
   }
 }
 

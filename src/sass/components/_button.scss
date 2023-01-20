@@ -1,3 +1,23 @@
+@use "sass:map";
+
+@import "../abstracts/variables";
+
 .border-inherit {
   border-color: inherit !important;
+}
+
+.toodoo-button {
+  background-color: map-get($map-colors, "magenta");
+  border-radius: 39px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+
+  &.ghost {
+    background-color: transparent;
+    border: 2px solid;
+    color: map-get($map-colors, "magenta");
+  }
 }

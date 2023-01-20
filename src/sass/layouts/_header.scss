@@ -1,7 +1,11 @@
-.select-language {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  font-size: 10px;
-  font-weight: 500;
+.header {
+  height: 130px;
+  margin-bottom: 75px;
+  .select-language {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
