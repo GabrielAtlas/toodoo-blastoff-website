@@ -64,8 +64,67 @@ button {
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */
+body {
+  font-family: "ubuntu", sans-serif;
+}
+
+.bg-blue {
+  background-color: #090d68;
+}
+
+.color-blue {
+  color: #090d68;
+}
+
+.bg-magenta {
+  background-color: #ea005a;
+}
+
+.color-magenta {
+  color: #ea005a;
+}
+
+.font-display-lg {
+  font-size: 60px;
+}
+
+.font-display-md {
+  font-size: 45px;
+}
+
+.fs-headline-lg {
+  font-size: 30px;
+}
+
+.font-title-lg {
+  font-size: 20px;
+}
+
+.font-title-md {
+  font-size: 18px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .border-inherit {
   border-color: inherit !important;
+}
+
+.toodoo-button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 39px;
+  border: none;
+  background-color: #ea005a;
+  font-weight: 500;
+}
+.toodoo-button.ghost {
+  color: #ea005a;
+  border: 2px solid #ea005a;
+  background-color: transparent;
 }
 
 /*
