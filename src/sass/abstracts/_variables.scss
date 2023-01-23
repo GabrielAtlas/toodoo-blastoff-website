@@ -117,6 +117,7 @@ body {
     }
     & .section-about {
       & .about-list {
+        column-gap: 40px;
         margin: 70px 0;
         padding: 85px 0;
         position: relative;
@@ -128,9 +129,27 @@ body {
           border: solid 2px #fffa;
           height: 200px;
           padding: 20px;
+          position: relative;
           width: 270px;
           &:nth-child(odd) {
             margin-top: 125px;
+            &:not(:first-child) {
+              &::before {
+                content: url(../../public/assets/images/about-lineway.svg);
+                position: absolute;
+                right: calc(50% - 8px);
+                top: calc(-100% - 25px);
+                transform: scaleX(-1) rotate(180deg);
+              }
+            }
+          }
+          &:nth-child(even) {
+            &::before {
+              bottom: calc(-100% - 25px);
+              content: url(../../public/assets/images/about-lineway.svg);
+              position: absolute;
+              right: calc(50% - 8px);
+            }
           }
           & .connection-line {
             background-color: rebeccapurple;

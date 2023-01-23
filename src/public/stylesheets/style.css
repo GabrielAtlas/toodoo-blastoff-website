@@ -119,6 +119,7 @@ body {
   max-width: 520px;
 }
 .page-blastoff .main .section-about .about-list {
+  column-gap: 40px;
   margin: 70px 0;
   padding: 85px 0;
   position: relative;
@@ -131,10 +132,24 @@ body {
   border: solid 2px rgba(255, 255, 255, 0.6666666667);
   height: 200px;
   padding: 20px;
+  position: relative;
   width: 270px;
 }
 .page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd) {
   margin-top: 125px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd):not(:first-child)::before {
+  content: url(../../public/assets/images/about-lineway.svg);
+  position: absolute;
+  right: calc(50% - 8px);
+  top: calc(-100% - 25px);
+  transform: scaleX(-1) rotate(180deg);
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(even)::before {
+  bottom: calc(-100% - 25px);
+  content: url(../../public/assets/images/about-lineway.svg);
+  position: absolute;
+  right: calc(50% - 8px);
 }
 .page-blastoff .main .section-about .about-list .about-list-item .connection-line {
   background-color: rebeccapurple;
@@ -271,6 +286,7 @@ body {
   max-width: 520px;
 }
 .page-blastoff .main .section-about .about-list {
+  column-gap: 40px;
   margin: 70px 0;
   padding: 85px 0;
   position: relative;
@@ -283,10 +299,24 @@ body {
   border: solid 2px rgba(255, 255, 255, 0.6666666667);
   height: 200px;
   padding: 20px;
+  position: relative;
   width: 270px;
 }
 .page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd) {
   margin-top: 125px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd):not(:first-child)::before {
+  content: url(../../public/assets/images/about-lineway.svg);
+  position: absolute;
+  right: calc(50% - 8px);
+  top: calc(-100% - 25px);
+  transform: scaleX(-1) rotate(180deg);
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(even)::before {
+  bottom: calc(-100% - 25px);
+  content: url(../../public/assets/images/about-lineway.svg);
+  position: absolute;
+  right: calc(50% - 8px);
 }
 .page-blastoff .main .section-about .about-list .about-list-item .connection-line {
   background-color: rebeccapurple;
