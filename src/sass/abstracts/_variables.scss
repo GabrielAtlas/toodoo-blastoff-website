@@ -1,8 +1,8 @@
-$color-blue: #090d68;
-$color-magenta: #ea005a;
-
+// maps
+$font-primary: "ubuntu", sans-serif;
 $map-colors: (
   "blue": #090d68,
+  "light-blue": #00eabd,
   "magenta": #ea005a,
 );
 
@@ -10,24 +10,107 @@ $map-colors-keys: map-keys(
   $map: $map-colors,
 );
 
+// tags
 body {
   font-family: $font-primary;
 }
 
+// loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {
-    background-color: map-get($map: $map-colors, $key: $key);
+    background-color: map-get($map: $map-colors, $key: $key) !important;
   }
   .color-#{$key} {
-    color: map-get($map: $map-colors, $key: $key);
+    color: map-get($map: $map-colors, $key: $key) !important;
   }
 }
 
-.font-display-lg {
-  font-size: 60px;
-  font-weight: 500;
+//placeholder
+%page-orbs {
+  @extend %pseudo-element;
+  @include square(584px);
+  background-color: map-get($map: $map-colors, $key: "magenta");
+  border-radius: 50%;
+  filter: blur(300px);
+  opacity: 0.2;
+  position: absolute;
 }
-.font-title-lg {
+
+%pseudo-element {
+  content: "";
+  display: block;
+}
+
+//classes
+.fs-display-lg {
+  font-size: 60px;
+}
+.fs-display-md {
+  font-size: 45px;
+}
+.fs-headline-lg {
+  font-size: 30px;
+}
+.fs-title-lg {
   font-size: 20px;
-  font-weight: 400;
+}
+.fs-title-md {
+  font-size: 18px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.light-orbs {
+  position: relative;
+
+  @extend %pseudo-element;
+  &::after {
+    @extend %page-orbs;
+    left: 0;
+    top: 50%;
+    transform: translate(-39%, -50%);
+  }
+  &::before {
+    @extend %page-orbs;
+    right: 0;
+    top: 0%;
+    transform: translate(39%, -40%);
+  }
+}
+
+.scroll-down-text {
+  font-weight: 300;
+  letter-spacing: 0.4em;
+}
+.scroll-down-button {
+  @include square(74px);
+  align-items: center;
+  border-radius: 100%;
+  border: solid 3px #fff;
+  cursor: pointer;
+  display: flex !important;
+  justify-content: center;
+  margin: auto;
+  & > img {
+    display: block;
+    max-width: 25px;
+    transform: translateY(3px);
+  }
+}
+
+.page-blastoff {
+  & .main {
+    & .rocket-animation {
+      max-height: 388px;
+      max-width: 640px;
+      overflow: hidden;
+    }
+    & .section-information {
+      .text-container {
+        max-width: 520px;
+      }
+    }
+  }
 }

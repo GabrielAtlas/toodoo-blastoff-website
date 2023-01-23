@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch ./sass:public/stylesheets"
+    "start": "sass --watch ./sass:public/stylesheets",
+    "sass": "sass -w src/sass:src/public/stylesheets"
   },
   "author": "Gabriel, Lucas",
   "license": "ISC"
