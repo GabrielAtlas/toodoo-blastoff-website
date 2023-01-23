@@ -1,0 +1,37 @@
+@use "sass:map";
+
+@import "../abstracts/variables";
+
+footer {
+  font-weight: 400;
+  line-height: 27px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.social-icons {
+  a:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.bottom-footer {
+  margin-top: 97px;
+  border-top: 1px solid white;
+}
+
+.card-columns {
+  column-count: 2;
+  text-transform: uppercase;
+
+  li:nth-child(n):not(:nth-child(3n)) {
+    margin-bottom: 12px;
+  }
+}
