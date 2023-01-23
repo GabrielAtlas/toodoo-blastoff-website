@@ -109,13 +109,39 @@ body {
   transform: translateY(3px);
 }
 
-.page-blastoff .main .rocket-animation {
+.page-blastoff .main .section-project .rocket-animation {
+  margin: 40px auto;
   max-height: 388px;
   max-width: 640px;
   overflow: hidden;
 }
 .page-blastoff .main .section-information .text-container {
   max-width: 520px;
+}
+.page-blastoff .main .section-about .about-list {
+  margin: 70px 0;
+  padding: 85px 0;
+  position: relative;
+}
+.page-blastoff .main .section-about .about-list .about-list-item {
+  background-image: linear-gradient(146.29deg, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.0666666667) 97.77%);
+  border-bottom-color: rgba(255, 255, 255, 0.3333333333);
+  border-radius: 15px;
+  border-right-color: rgba(255, 255, 255, 0.3333333333);
+  border: solid 2px rgba(255, 255, 255, 0.6666666667);
+  height: 200px;
+  padding: 20px;
+  width: 270px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd) {
+  margin-top: 125px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item .connection-line {
+  background-color: rebeccapurple;
+  height: 190px;
+  left: 0;
+  position: absolute;
+  width: 50%;
 }
 
 /*
@@ -235,13 +261,39 @@ body {
   transform: translateY(3px);
 }
 
-.page-blastoff .main .rocket-animation {
+.page-blastoff .main .section-project .rocket-animation {
+  margin: 40px auto;
   max-height: 388px;
   max-width: 640px;
   overflow: hidden;
 }
 .page-blastoff .main .section-information .text-container {
   max-width: 520px;
+}
+.page-blastoff .main .section-about .about-list {
+  margin: 70px 0;
+  padding: 85px 0;
+  position: relative;
+}
+.page-blastoff .main .section-about .about-list .about-list-item {
+  background-image: linear-gradient(146.29deg, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.0666666667) 97.77%);
+  border-bottom-color: rgba(255, 255, 255, 0.3333333333);
+  border-radius: 15px;
+  border-right-color: rgba(255, 255, 255, 0.3333333333);
+  border: solid 2px rgba(255, 255, 255, 0.6666666667);
+  height: 200px;
+  padding: 20px;
+  width: 270px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd) {
+  margin-top: 125px;
+}
+.page-blastoff .main .section-about .about-list .about-list-item .connection-line {
+  background-color: rebeccapurple;
+  height: 190px;
+  left: 0;
+  position: absolute;
+  width: 50%;
 }
 
 .border-inherit {
