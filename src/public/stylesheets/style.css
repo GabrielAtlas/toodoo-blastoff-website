@@ -349,15 +349,28 @@ Files inside this folder can contain specific element styles and layout.
   position: relative;
 }
 .page-blastoff .main .section-professionals .professional-list .professional-list-item .profile-image {
+  border-radius: 100%;
   left: 50%;
   margin: auto;
+  overflow: hidden;
   position: absolute;
   top: -65px;
   transform: translateX(-50%);
   width: 125px;
+  border: solid 2px rgba(225, 207, 214, 0.7333333333);
 }
 .page-blastoff .main .section-apprenticeship {
   margin-bottom: 175px;
+}
+.page-blastoff .main .section-apprenticeship .light-orbs::after {
+  display: none;
+}
+.page-blastoff .main .section-apprenticeship .light-orbs::before {
+  opacity: 0.15;
+  right: 10%;
+  top: 100%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 .page-blastoff .main .section-apprenticeship .apprenticeship-info {
   max-width: 510px;
