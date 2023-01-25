@@ -1,0 +1,124 @@
+.page-blastoff {
+  & .main {
+    & .section-project {
+      & .rocket-animation {
+        margin: 40px auto;
+        max-height: 388px;
+        max-width: 640px;
+        overflow: hidden;
+      }
+    }
+    & .section-information {
+      .text-container {
+        max-width: 520px;
+      }
+    }
+    & .section-about {
+      margin-bottom: 220px;
+      & .about-list {
+        column-gap: 40px;
+        margin: 70px 0 100px;
+        padding: 85px 0;
+        position: relative;
+        & .about-list-item {
+          height: 200px;
+          padding: 20px;
+          position: relative;
+          width: 270px;
+          &:nth-child(odd) {
+            margin-top: 125px;
+            &:not(:first-child) {
+              &::before {
+                content: url(../../public/assets/images/about-lineway.svg);
+                position: absolute;
+                right: calc(50% - 8px);
+                top: calc(-100% - 25px);
+                transform: scaleX(-1) rotate(180deg);
+              }
+            }
+          }
+          &:nth-child(even) {
+            &::before {
+              bottom: calc(-100% - 25px);
+              content: url(../../public/assets/images/about-lineway.svg);
+              position: absolute;
+              right: calc(50% - 8px);
+            }
+          }
+          & .connection-line {
+            background-color: rebeccapurple;
+            height: 190px;
+            left: 0;
+            position: absolute;
+            width: 50%;
+          }
+        }
+      }
+      & .text-box {
+        margin: 32px auto 0;
+        font-size: 22px;
+        max-width: 720px;
+      }
+    }
+    & .section-professionals {
+      margin-bottom: 150px;
+      & .professional-list {
+        gap: 40px;
+        margin-top: 125px;
+        & .professional-list-item {
+          flex-grow: 1;
+          max-width: 270px;
+          min-height: 290px;
+          padding: 60px 19px 24px;
+          position: relative;
+          & .profile-image {
+            left: 50%;
+            margin: auto;
+            position: absolute;
+            top: -65px;
+            transform: translateX(-50%);
+            width: 125px;
+          }
+        }
+      }
+    }
+    & .section-doubts {
+      margin-bottom: 160px;
+      .accordion {
+        & .accordion-item {
+          border: none;
+          background-color: transparent;
+          & .accordion-header {
+            & .accordion-button {
+              @extend .bg-blur;
+              background-color: transparent;
+              &::after {
+                filter: invert(81%) sepia(100%) saturate(0%) hue-rotate(119deg)
+                  brightness(105%) contrast(104%);
+              }
+            }
+          }
+        }
+      }
+    }
+    & .section-participate {
+      margin-bottom: 150px;
+      & .participate-card {
+        padding: 112px 0;
+        p {
+          margin: auto;
+          max-width: 605px;
+        }
+      }
+      & .light-orbs {
+        &::before {
+          display: none;
+        }
+        &::after {
+          bottom: 0;
+          transform: translate(-50%, -20%);
+        }
+      }
+    }
+  }
+}
