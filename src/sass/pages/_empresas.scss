@@ -1,0 +1,177 @@
+@use "sass:map";
+
+@import "../abstracts/variables";
+
+$primary-color: map-get($map-colors, "magenta");
+$secondary-color: map-get($map-colors, "light-blue");
+
+.rounded {
+  border-radius: 37px !important;
+}
+
+.branding {
+  background-color: map-get($map-colors, "blue");
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 427px;
+    height: 427px;
+    bottom: -100px;
+    background: rgba(234, 0, 90, 0.25);
+    filter: blur(100px);
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 427px;
+    height: 427px;
+    right: 0;
+    top: -120px;
+    background: rgba(234, 0, 90, 0.25);
+    filter: blur(40px);
+  }
+}
+
+.brading-info {
+  position: relative;
+  max-width: 577px;
+
+  z-index: 2;
+
+  h1 {
+    font-size: 60px;
+    color: white;
+    max-width: 466px;
+  }
+
+  p {
+    color: white;
+    font-size: 20px;
+  }
+
+  button {
+    border-color: white !important;
+    color: white !important;
+  }
+}
+
+.sorry-go-ahead {
+  position: absolute;
+  width: 177px;
+  height: 110px;
+  left: -25%;
+  top: -10%;
+  border-radius: 15px;
+  z-index: 2;
+  background: linear-gradient(
+      0deg,
+      rgba(9, 13, 104, 0.4),
+      rgba(9, 13, 104, 0.4)
+    ),
+    url("../../public/assets/gifs/empresas-2.gif");
+  background-size: 177px 110px; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.i-cant-hear-you {
+  position: absolute;
+  width: 292px;
+  height: 180px;
+  background: linear-gradient(
+      0deg,
+      rgba(9, 13, 104, 0.6),
+      rgba(9, 13, 104, 0.6)
+    ),
+    url("../../public/assets/gifs/empresas-3.gif");
+  background-size: 292px 180px; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  left: -45%;
+  top: 60%;
+}
+
+.people-gif {
+  position: absolute;
+  width: 187px;
+  height: 113px;
+  background: linear-gradient(
+      0deg,
+      rgba(9, 13, 104, 0.8),
+      rgba(9, 13, 104, 0.8)
+    ),
+    url("../../public/assets/gifs/empresas-4.gif");
+  background-size: 187px 113px; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: -1;
+  right: 0;
+  bottom: -11.4%;
+}
+
+.step-card {
+  display: flex;
+  width: 575px;
+  height: 174px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 35px;
+  border-bottom: 1px solid #b8b8b8;
+  cursor: pointer;
+
+  img {
+    padding: 15px;
+    border: 2px solid $primary-color;
+    border-radius: 15px;
+    margin-right: 19px;
+  }
+
+  &.active {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.rocket-section {
+  text-align: center;
+  color: white;
+  max-width: 850px;
+
+  p {
+    font-size: 22px;
+
+    strong {
+      color: $secondary-color;
+    }
+  }
+}
+
+.methodology-heading,
+.our-job-heading {
+  h1 {
+    max-width: 677px;
+    margin: 0 auto;
+  }
+
+  p {
+    max-width: 719px;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
