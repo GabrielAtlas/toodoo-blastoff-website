@@ -207,10 +207,10 @@ $light-blue: map-get(
         max-width: 995px;
         row-gap: 160px;
         & .process-primary-item {
-          &:nth-child(1n + 2){
-            & .process-secondary-item:first-child{
-              &::before{
-                content: url('../../public/assets/icons/process-item-line-dashed-top.svg');
+          &:nth-child(1n + 2) {
+            & .process-secondary-item:first-child {
+              &::before {
+                content: url("../../public/assets/icons/process-item-line-dashed-top.svg");
                 left: 50%;
                 position: absolute;
                 transform: translate(-50%, calc(-100% - 24px));
@@ -240,6 +240,7 @@ $light-blue: map-get(
             column-gap: 74px;
             display: flex;
             justify-content: flex-start;
+            min-width: 995px;
             & .process-secondary-item {
               max-width: 280px;
               position: relative;
@@ -269,6 +270,67 @@ $light-blue: map-get(
               }
             }
           }
+        }
+      }
+    }
+    & .section-depositions {
+      margin-bottom: 250px;
+      & .depositions-info {
+        margin-top: 65px;
+        max-width: 420px;
+        & .depositions-title {
+          font-size: 85px;
+          font-weight: 500;
+          line-height: 75px;
+          letter-spacing: 0.005em;
+          text-align: left;
+        }
+        & .depositions-text {
+          margin: 11px 0 60px;
+        }
+      }
+      & .students-depositions {
+        border: solid 2px red;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        width: 730px;
+        & .student-info {
+          backdrop-filter: blur(50px);
+          border-radius: 41px;
+          height: 270px;
+          margin-top: 65px;
+          transform: translateX(60px);
+          width: 470px;
+          position: relative;
+          &::before {
+            background-image: url("../../public/assets/icons/speech-balloon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            display: block;
+            height: 290px;
+            left: -5px;
+            position: absolute;
+            top: -10px;
+            width: 410px;
+            z-index: 1;
+          }
+          & .ballon-detail {
+            backdrop-filter: blur(10px);
+            bottom: 13px;
+            clip-path: polygon(50% 0, 30% 95%, 100% 100%);
+            content: "";
+            display: block;
+            height: 75px;
+            position: absolute;
+            right: -10px;
+            width: 25px;
+          }
+        }
+        & .student-image {
+          max-width: 407px;
         }
       }
     }

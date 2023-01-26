@@ -496,6 +496,7 @@ Files inside this folder can contain specific element styles and layout.
   column-gap: 74px;
   display: flex;
   justify-content: flex-start;
+  min-width: 995px;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item {
   max-width: 280px;
@@ -522,6 +523,67 @@ Files inside this folder can contain specific element styles and layout.
 .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item .process-secondary-text {
   font-size: 18px;
   font-weight: 400;
+}
+.page-blastoff .main .section-depositions {
+  margin-bottom: 250px;
+}
+.page-blastoff .main .section-depositions .depositions-info {
+  margin-top: 65px;
+  max-width: 420px;
+}
+.page-blastoff .main .section-depositions .depositions-info .depositions-title {
+  font-size: 85px;
+  font-weight: 500;
+  line-height: 75px;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+.page-blastoff .main .section-depositions .depositions-info .depositions-text {
+  margin: 11px 0 60px;
+}
+.page-blastoff .main .section-depositions .students-depositions {
+  border: solid 2px red;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 730px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info {
+  backdrop-filter: blur(50px);
+  border-radius: 41px;
+  height: 270px;
+  margin-top: 65px;
+  transform: translateX(60px);
+  width: 470px;
+  position: relative;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info::before {
+  background-image: url("../../public/assets/icons/speech-balloon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 290px;
+  left: -5px;
+  position: absolute;
+  top: -10px;
+  width: 410px;
+  z-index: 1;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .ballon-detail {
+  backdrop-filter: blur(10px);
+  bottom: 13px;
+  clip-path: polygon(50% 0, 30% 95%, 100% 100%);
+  content: "";
+  display: block;
+  height: 75px;
+  position: absolute;
+  right: -10px;
+  width: 25px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-image {
+  max-width: 407px;
 }
 .page-blastoff .main .section-doubts {
   margin-bottom: 160px;
