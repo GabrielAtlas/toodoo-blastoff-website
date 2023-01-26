@@ -8,6 +8,7 @@
   <title>BlastOff</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <script defer src="../public/js/blastoff.js"></script>
 </head>
 
 <body class="bg-blue overflow-x-hidden overflow-y-scroll page-blastoff">
@@ -112,7 +113,7 @@
     </section>
   </header>
   <main class="main">
-    <section class="section-project light-orbs">
+    <section class="section-project light-orbs d-none">
       <div class="container">
         <div class="text-center">
           <p class="fs-headline-lg color-magenta fw-bold">O programa</p>
@@ -131,7 +132,7 @@
         </div>
       </div>
     </section>
-    <section class="section-information mb-5">
+    <section class="section-information mb-5 d-none">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="text-white w-50">
           <h2 class="text-container fs-display-lg mb-3">
@@ -148,7 +149,7 @@
         </div>
       </div>
     </section>
-    <section class="section-about light-orbs">
+    <section class="section-about light-orbs d-none">
       <div class="container">
         <div class="text-center">
           <p class="fs-headline-lg color-magenta fw-bold">Sobre</p>
@@ -200,7 +201,7 @@
         </div>
       </div>
     </section>
-    <section class="section-professionals">
+    <section class="section-professionals d-none">
       <div class="container">
         <div class="text-center">
           <p class="fs-headline-lg color-magenta fw-bold">Profissionais</p>
@@ -233,7 +234,7 @@
         </div>
       </div>
     </section>
-    <section class="section-apprenticeship light-orbs">
+    <section class="section-apprenticeship light-orbs d-none">
       <div class="container light-orbs">
         <div class="text-white d-flex justify-content-between align-items-end mb-5">
           <div class="">
@@ -253,7 +254,7 @@
             <li class="apprenticeship-button next bg-magenta cursor-pointer">
 
             </li>
-            <li class="apprenticeship-list-item bg-blur text-white active">
+            <li class="apprenticeship-list-item bg-blur text-white active" data-list-item="0">
               <h2 class="apprenticeship-item-title">01</h2>
               <h3 class="apprenticeship-item-subtitle">Lógica de programação</h3>
               <div class="apprenticeship-elements-hidden">
@@ -263,7 +264,7 @@
                 <a class="toodoo-button text-decoration-none fw-bold" href="#">Saiba mais</a>
               </div>
             </li>
-            <li class="apprenticeship-list-item bg-blur text-white">
+            <li class="apprenticeship-list-item bg-blur text-white" data-list-item="1">
               <h2 class="apprenticeship-item-title">02</h2>
               <h3 class="apprenticeship-item-subtitle">Banco de Dados</h3>
               <div class="apprenticeship-elements-hidden">
@@ -273,7 +274,7 @@
                 <a class="toodoo-button text-decoration-none fw-bold" href="#">Saiba mais</a>
               </div>
             </li>
-            <li class="apprenticeship-list-item bg-blur text-white">
+            <li class="apprenticeship-list-item bg-blur text-white" data-list-item="2">
               <h2 class="apprenticeship-item-title">03</h2>
               <h3 class="apprenticeship-item-subtitle">Repositório e Versionador de Código</h3>
               <div class="apprenticeship-elements-hidden">
@@ -283,7 +284,7 @@
                 <a class="toodoo-button text-decoration-none fw-bold" href="#">Saiba mais</a>
               </div>
             </li>
-            <li class="apprenticeship-list-item bg-blur text-white">
+            <li class="apprenticeship-list-item bg-blur text-white" data-list-item="3">
               <h2 class="apprenticeship-item-title">04</h2>
               <h3 class="apprenticeship-item-subtitle">Programação Orientada a Objetos</h3>
               <div class="apprenticeship-elements-hidden">
@@ -295,18 +296,25 @@
             </li>
           </ul>
           <ul class="apprenticeship-tip-list list-unstyled">
-            <li class="apprenticeship-tip-item active"></li>
-            <li class="apprenticeship-tip-item"></li>
-            <li class="apprenticeship-tip-item"></li>
-            <li class="apprenticeship-tip-item"></li>
+            <li class="apprenticeship-tip-item active" data-list-item="0"></li>
+            <li class="apprenticeship-tip-item" data-list-item="1"></li>
+            <li class="apprenticeship-tip-item" data-list-item="2"></li>
+            <li class="apprenticeship-tip-item" data-list-item="3"></li>
           </ul>
         </div>
       </div>
     </section>
-    <section>
-
+    <section class="section-process">
+      <div class="container">
+        <div class="text-center">
+          <p class="fs-headline-lg color-magenta fw-bold mb-2">O processo seletivo</p>
+          <p class="fs-title-lg text-white">
+            Entenda como funciona nosso <br> processo seletivo
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="section-doubts light-orbs">
+    <section class="section-doubts light-orbs d-none">
       <div class="container">
         <div class="text-center">
           <h2 class="fs-display-md text-white fw-medium m-0">
@@ -382,7 +390,7 @@
         </div>
       </div>
     </section>
-    <section class="section-participate">
+    <section class="section-participate d-none">
       <div class="container">
         <div class="participate-card light-orbs fs-headline-lg bg-blur text-white text-center">
           <p class="color-light-blue fw-bold mb-2">Faça parte</p>
