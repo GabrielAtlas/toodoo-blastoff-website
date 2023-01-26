@@ -199,6 +199,78 @@ $light-blue: map-get(
       }
     }
     & .section-process {
+      margin-bottom: 230px;
+      & .process-primary-list {
+        display: flex;
+        flex-direction: column;
+        margin: 88px auto 0;
+        max-width: 995px;
+        row-gap: 160px;
+        & .process-primary-item {
+          &:nth-child(1n + 2){
+            & .process-secondary-item:first-child{
+              &::before{
+                content: url('../../public/assets/icons/process-item-line-dashed-top.svg');
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, calc(-100% - 24px));
+                top: 0;
+              }
+            }
+          }
+          &:nth-child(2n + 2) {
+            & .process-secondary-list {
+              flex-direction: row-reverse;
+              & .process-secondary-item {
+                &:nth-child(1n + 2) {
+                  &::before {
+                    content: url("../../public/assets/icons/process-item-line-dashed.svg");
+                    display: block;
+                    left: 0;
+                    position: absolute;
+                    right: initial;
+                    top: 32px;
+                    transform: translateX(80%);
+                  }
+                }
+              }
+            }
+          }
+          & .process-secondary-list {
+            column-gap: 74px;
+            display: flex;
+            justify-content: flex-start;
+            & .process-secondary-item {
+              max-width: 280px;
+              position: relative;
+              text-align: center;
+              &:not(:nth-child(3n - 2)) {
+                &::before {
+                  content: url("../../public/assets/icons/process-item-line-dashed.svg");
+                  display: block;
+                  position: absolute;
+                  right: 0;
+                  top: 32px;
+                  transform: translateX(-80%);
+                }
+              }
+              & .process-secondary-image {
+                max-width: 65px;
+                margin: auto;
+              }
+              & .process-secondary-title {
+                font-size: 18px;
+                font-weight: 700;
+                margin: 9px 0;
+              }
+              & .process-secondary-text {
+                font-size: 18px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
     }
     & .section-doubts {
       margin-bottom: 160px;

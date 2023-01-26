@@ -463,6 +463,66 @@ Files inside this folder can contain specific element styles and layout.
   background-color: #00eabd;
   width: 16px;
 }
+.page-blastoff .main .section-process {
+  margin-bottom: 230px;
+}
+.page-blastoff .main .section-process .process-primary-list {
+  display: flex;
+  flex-direction: column;
+  margin: 88px auto 0;
+  max-width: 995px;
+  row-gap: 160px;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(1n+2) .process-secondary-item:first-child::before {
+  content: url("../../public/assets/icons/process-item-line-dashed-top.svg");
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 24px));
+  top: 0;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(2n+2) .process-secondary-list {
+  flex-direction: row-reverse;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(2n+2) .process-secondary-list .process-secondary-item:nth-child(1n+2)::before {
+  content: url("../../public/assets/icons/process-item-line-dashed.svg");
+  display: block;
+  left: 0;
+  position: absolute;
+  right: initial;
+  top: 32px;
+  transform: translateX(80%);
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list {
+  column-gap: 74px;
+  display: flex;
+  justify-content: flex-start;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item {
+  max-width: 280px;
+  position: relative;
+  text-align: center;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item:not(:nth-child(3n-2))::before {
+  content: url("../../public/assets/icons/process-item-line-dashed.svg");
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  transform: translateX(-80%);
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item .process-secondary-image {
+  max-width: 65px;
+  margin: auto;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item .process-secondary-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 9px 0;
+}
+.page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item .process-secondary-text {
+  font-size: 18px;
+  font-weight: 400;
+}
 .page-blastoff .main .section-doubts {
   margin-bottom: 160px;
 }
