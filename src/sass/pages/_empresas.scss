@@ -123,11 +123,11 @@ $secondary-color: map-get($map-colors, "light-blue");
 
 .step-card {
   display: flex;
-  width: 575px;
-  height: 174px;
+  width: 100%;
+  max-width: 575px;
   justify-content: center;
   align-items: center;
-  padding: 32px 35px;
+  padding: 41px 35px;
   border-bottom: 1px solid #b8b8b8;
   cursor: pointer;
 
@@ -136,6 +136,8 @@ $secondary-color: map-get($map-colors, "light-blue");
     border: 2px solid $primary-color;
     border-radius: 15px;
     margin-right: 19px;
+    width: 71px;
+    height: 69px;
   }
 
   &.active {
@@ -146,6 +148,10 @@ $secondary-color: map-get($map-colors, "light-blue");
   &:last-child {
     border-bottom: 0;
   }
+}
+
+#branding-section {
+  overflow: hidden;
 }
 
 .rocket-section {
@@ -163,7 +169,8 @@ $secondary-color: map-get($map-colors, "light-blue");
 }
 
 .methodology-heading,
-.our-job-heading {
+.our-job-heading,
+.feedback-heading {
   h1 {
     max-width: 677px;
     margin: 0 auto;
@@ -173,5 +180,42 @@ $secondary-color: map-get($map-colors, "light-blue");
     max-width: 719px;
     margin: auto;
     margin-top: 10px;
+  }
+}
+
+#form-section {
+  position: relative;
+  background: url("../../public/assets/images/bg-cam-people.png");
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #090d68 0%, #ea005a 100%);
+    opacity: 0.65;
+    z-index: 0;
+  }
+}
+
+.form-section-container {
+  * {
+    z-index: 1;
+  }
+}
+
+.form-section-texts {
+  h1 {
+    font-size: 60px;
+  }
+
+  h1,
+  p {
+    color: white;
+  }
+
+  strong {
+    color: $primary-color;
   }
 }
