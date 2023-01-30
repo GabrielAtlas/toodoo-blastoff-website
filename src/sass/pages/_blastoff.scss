@@ -7,6 +7,23 @@ $light-blue: map-get(
   $key: "light-blue",
 );
 
+%carousel-tip {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  & [class*="-tip-item"] {
+    @include square(8px);
+    background-color: $magenta;
+    border-radius: 40px;
+    transition: 0.3s;
+    &.active {
+      background-color: $light-blue;
+      width: 16px;
+    }
+  }
+}
+
 .page-blastoff {
   & .main {
     & .section-project {
@@ -182,20 +199,7 @@ $light-blue: map-get(
         }
       }
       & .apprenticeship-tip-list {
-        align-items: center;
-        display: flex;
-        gap: 6px;
-        justify-content: center;
-        & .apprenticeship-tip-item {
-          @include square(8px);
-          background-color: $magenta;
-          border-radius: 40px;
-          transition: 0.3s;
-          &.active {
-            background-color: $light-blue;
-            width: 16px;
-          }
-        }
+        @extend %carousel-tip;
       }
     }
     & .section-process {
@@ -274,7 +278,7 @@ $light-blue: map-get(
       }
     }
     & .section-depositions {
-      margin-bottom: 250px;
+      // margin-bottom: 250px;
       & .depositions-info {
         margin-top: 65px;
         max-width: 420px;
@@ -307,10 +311,10 @@ $light-blue: map-get(
           align-items: flex-end;
           display: flex;
           height: fit-content;
+          left: 30px;
           margin-top: 65px;
           max-width: 420px;
-          position: relative;
-          transform: translateX(60px);
+          position: absolute;
           width: 100%;
           z-index: 1;
           & .student-balloon {
@@ -387,6 +391,29 @@ $light-blue: map-get(
             transform: translate(50%, 50%);
             z-index: 1;
           }
+        }
+      }
+      & .list-container {
+        position: relative;
+        transform: translateY(-75%);
+        & .students-list {
+          column-gap: 20px;
+          display: flex;
+          justify-content: center;
+          & .students-list-item {
+            background-color: $magenta;
+            border-radius: 20px;
+            cursor: pointer;
+            height: 280px;
+            overflow: hidden;
+            width: 265px;
+            & > figure {
+              padding: 26px 26px 0;
+            }
+          }
+        }
+        & .students-tip-list {
+          @extend %carousel-tip;
         }
       }
     }

@@ -274,6 +274,24 @@ Files inside this folder can contain specific element styles and layout.
   width: 55px;
 }
 
+.page-blastoff .main .section-depositions .list-container .students-tip-list, .page-blastoff .main .section-apprenticeship .apprenticeship-tip-list {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+.page-blastoff .main .section-depositions .list-container .students-tip-list [class*=-tip-item], .page-blastoff .main .section-apprenticeship .apprenticeship-tip-list [class*=-tip-item] {
+  height: 8px;
+  width: 8px;
+  background-color: #ea005a;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.page-blastoff .main .section-depositions .list-container .students-tip-list [class*=-tip-item].active, .page-blastoff .main .section-apprenticeship .apprenticeship-tip-list [class*=-tip-item].active {
+  background-color: #00eabd;
+  width: 16px;
+}
+
 .page-blastoff .main .section-project .rocket-animation {
   margin: 40px auto;
   max-height: 388px;
@@ -438,23 +456,6 @@ Files inside this folder can contain specific element styles and layout.
 .page-blastoff .main .section-apprenticeship .apprenticeship-list .apprenticeship-list-item .apprenticeship-elements-hidden .toodoo-button {
   width: fit-content;
 }
-.page-blastoff .main .section-apprenticeship .apprenticeship-tip-list {
-  align-items: center;
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-}
-.page-blastoff .main .section-apprenticeship .apprenticeship-tip-list .apprenticeship-tip-item {
-  height: 8px;
-  width: 8px;
-  background-color: #ea005a;
-  border-radius: 40px;
-  transition: 0.3s;
-}
-.page-blastoff .main .section-apprenticeship .apprenticeship-tip-list .apprenticeship-tip-item.active {
-  background-color: #00eabd;
-  width: 16px;
-}
 .page-blastoff .main .section-process {
   margin-bottom: 230px;
 }
@@ -516,9 +517,6 @@ Files inside this folder can contain specific element styles and layout.
   font-size: 18px;
   font-weight: 400;
 }
-.page-blastoff .main .section-depositions {
-  margin-bottom: 250px;
-}
 .page-blastoff .main .section-depositions .depositions-info {
   margin-top: 65px;
   max-width: 420px;
@@ -552,10 +550,10 @@ Files inside this folder can contain specific element styles and layout.
   align-items: flex-end;
   display: flex;
   height: fit-content;
+  left: 30px;
   margin-top: 65px;
   max-width: 420px;
-  position: relative;
-  transform: translateX(60px);
+  position: absolute;
   width: 100%;
   z-index: 1;
 }
@@ -624,6 +622,26 @@ Files inside this folder can contain specific element styles and layout.
   right: 0;
   transform: translate(50%, 50%);
   z-index: 1;
+}
+.page-blastoff .main .section-depositions .list-container {
+  position: relative;
+  transform: translateY(-75%);
+}
+.page-blastoff .main .section-depositions .list-container .students-list {
+  column-gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+.page-blastoff .main .section-depositions .list-container .students-list .students-list-item {
+  background-color: #ea005a;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 280px;
+  overflow: hidden;
+  width: 265px;
+}
+.page-blastoff .main .section-depositions .list-container .students-list .students-list-item > figure {
+  padding: 26px 26px 0;
 }
 .page-blastoff .main .section-doubts {
   margin-bottom: 160px;
