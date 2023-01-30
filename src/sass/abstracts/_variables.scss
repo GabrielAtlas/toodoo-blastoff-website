@@ -10,11 +10,6 @@ $map-colors-keys: map-keys(
   $map: $map-colors,
 );
 
-// tags
-body {
-  font-family: $font-primary;
-}
-
 // loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {
@@ -107,5 +102,3 @@ body {
     transform: translateY(3px);
   }
 }
-
-

@@ -6,10 +6,6 @@ This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
 */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
-body {
-  font-family: "ubuntu", sans-serif;
-}
-
 .bg-blue {
   background-color: #090d68 !important;
 }
@@ -131,10 +127,6 @@ button {
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */
-body {
-  font-family: "ubuntu", sans-serif;
-}
-
 .bg-blue {
   background-color: #090d68 !important;
 }
@@ -542,48 +534,96 @@ Files inside this folder can contain specific element styles and layout.
   margin: 11px 0 60px;
 }
 .page-blastoff .main .section-depositions .students-depositions {
-  border: solid 2px red;
   display: flex;
   justify-content: flex-end;
   position: relative;
   width: 730px;
 }
-.page-blastoff .main .section-depositions .students-depositions .student-info {
-  backdrop-filter: blur(50px);
-  border-radius: 41px;
-  height: 270px;
-  margin-top: 65px;
-  transform: translateX(60px);
-  width: 470px;
-  position: relative;
-}
-.page-blastoff .main .section-depositions .students-depositions .student-info::before {
-  background-image: url("../../public/assets/icons/speech-balloon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.page-blastoff .main .section-depositions .students-depositions .student-image::after, .page-blastoff .main .section-depositions .students-depositions .student-image::before {
+  background-color: #ea005a;
+  border-radius: 100%;
   content: "";
   display: block;
-  height: 290px;
-  left: -5px;
+  filter: blur(300px);
+  opacity: 0.5;
   position: absolute;
-  top: -10px;
-  width: 410px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info {
+  align-items: flex-end;
+  display: flex;
+  height: fit-content;
+  margin-top: 65px;
+  max-width: 420px;
+  position: relative;
+  transform: translateX(60px);
+  width: 100%;
   z-index: 1;
 }
-.page-blastoff .main .section-depositions .students-depositions .student-info .ballon-detail {
-  backdrop-filter: blur(10px);
-  bottom: 13px;
-  clip-path: polygon(50% 0, 30% 95%, 100% 100%);
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon {
+  backdrop-filter: blur(40px);
+  border-radius: 41px;
+  border: solid 2px rgba(217, 217, 217, 0.4666666667);
+  height: 290px;
+  padding: 25px 32px 25px 25px;
+  width: 100%;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon .student-information-container {
+  overflow-y: scroll;
+  padding-right: 12px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon .student-information-container::-webkit-scrollbar {
+  background-color: #bb8db0;
+  border-radius: 27px;
+  width: 5px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon .student-information-container::-webkit-scrollbar-thumb {
+  background-color: #ea005a;
+  border-radius: 27px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon .student-information-container .student-text {
+  font-size: 18px;
+  letter-spacing: 0.005em;
+  max-height: 205px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon-detail {
+  backdrop-filter: blur(30px);
+  bottom: 32px;
+  clip-path: polygon(0 0, 3px 0, 100% 100%, 0 90%);
+  height: 65px;
+  left: -5px;
+  position: relative;
+  width: 25px;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-info .student-balloon-detail::before {
   content: "";
   display: block;
-  height: 75px;
-  position: absolute;
-  right: -10px;
-  width: 25px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(217, 217, 217, 0.4666666667);
+  clip-path: polygon(3px 0, 100% 100%, 3px 90%, 3px calc(90% - 4px), calc(100% - 4px) calc(100% - 4px), 3px 5px);
 }
 .page-blastoff .main .section-depositions .students-depositions .student-image {
   max-width: 407px;
+  position: relative;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-image > img {
+  display: block;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-image::before {
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 430px;
+  z-index: -1;
+}
+.page-blastoff .main .section-depositions .students-depositions .student-image::after {
+  height: 500px;
+  width: 500px;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  z-index: 1;
 }
 .page-blastoff .main .section-doubts {
   margin-bottom: 160px;
