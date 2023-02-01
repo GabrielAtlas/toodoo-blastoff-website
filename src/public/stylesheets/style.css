@@ -122,6 +122,24 @@ body {
 This file is used to contain all base imports.
 Files inside this folder can contain global styles used in the project.
 */
+.form-check-input:checked {
+  background-image: url("../../public/assets/icons/check-icon.svg") !important;
+}
+
+.form-check-input:checked[type=checkbox] {
+  border-width: 2px;
+  outline: 0;
+}
+
+input[type=radio]:focus {
+  outline: none;
+}
+
+.form-check-input:checked {
+  background: none;
+  border-color: #ea005a;
+}
+
 body,
 input,
 button {
@@ -150,6 +168,39 @@ Files inside this folder should contain all styles relating to a reusable compon
   background-color: transparent;
   border: 2px solid;
   color: #ea005a;
+}
+
+label {
+  position: relative;
+}
+label span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.375rem 0.25rem;
+  margin: calc(0.375rem + 3px) 0.25rem;
+  background: pink;
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: var(--color-background);
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+}
+label input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid currentColor;
+  padding: calc(var(0.5rem) * 1.5) var(0.5rem);
+  color: currentColor;
+  background: transparent;
+  border-radius: 4px;
+}
+label input:focus + .input__label, label input:not(:placeholder-shown) + .input__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--color-accent);
 }
 
 /*
@@ -590,8 +641,37 @@ body {
   z-index: 0;
 }
 
+.toodoo-form {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+  padding: 22px;
+  max-width: 420px;
+}
+.toodoo-form label {
+  display: block;
+}
+.toodoo-form button {
+  margin-bottom: 15px;
+}
+.toodoo-form .form-check-label {
+  color: #1d1d1d;
+}
+
 .form-section-container * {
   z-index: 1;
+}
+
+.solution-section-texts {
+  max-width: 378px;
+}
+.solution-section-texts h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #090d68;
+}
+.solution-section-texts strong {
+  color: #ea005a;
 }
 
 .form-section-texts h1 {

@@ -4,6 +4,7 @@
 
 $primary-color: map-get($map-colors, "magenta");
 $secondary-color: map-get($map-colors, "light-blue");
+$third-color: map-get($map-colors, "blue");
 
 .rounded {
   border-radius: 37px !important;
@@ -199,9 +200,46 @@ $secondary-color: map-get($map-colors, "light-blue");
   }
 }
 
+.toodoo-form {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+  padding: 22px;
+  max-width: 420px;
+
+  label {
+    display: block;
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+
+  .form-check-label {
+    color: #1d1d1d;
+  }
+}
+
 .form-section-container {
   * {
     z-index: 1;
+  }
+}
+
+#solution-section {
+}
+
+.solution-section-texts {
+  max-width: 378px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $third-color;
+  }
+
+  strong {
+    color: $primary-color;
   }
 }
 
