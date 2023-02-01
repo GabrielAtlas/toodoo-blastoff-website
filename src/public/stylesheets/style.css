@@ -46,19 +46,39 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 
 .fs-display-lg {
-  font-size: 60px;
+  font-size: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-display-lg {
+    font-size: 60px;
+  }
 }
 
 .fs-display-md {
-  font-size: 45px;
+  font-size: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-display-md {
+    font-size: 45px;
+  }
 }
 
 .fs-headline-lg {
-  font-size: 30px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-headline-lg {
+    font-size: 30px;
+  }
 }
 
 .fs-title-lg {
-  font-size: 20px;
+  font-size: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-title-lg {
+    font-size: 20px;
+  }
 }
 
 .fs-title-md {
@@ -97,15 +117,21 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 
 .scroll-down-button {
-  height: 74px;
-  width: 74px;
+  height: 54px;
+  width: 54px;
   align-items: center;
   border-radius: 100%;
-  border: solid 3px #fff;
+  border: solid 2px #fff;
   cursor: pointer;
   display: flex !important;
   justify-content: center;
   margin: auto;
+}
+@media screen and (min-width: 1200px) {
+  .scroll-down-button {
+    height: 74px;
+    width: 74px;
+  }
 }
 .scroll-down-button > img {
   display: block;
@@ -167,19 +193,39 @@ Files inside this folder should contain all styles relating to a reusable compon
 }
 
 .fs-display-lg {
-  font-size: 60px;
+  font-size: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-display-lg {
+    font-size: 60px;
+  }
 }
 
 .fs-display-md {
-  font-size: 45px;
+  font-size: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-display-md {
+    font-size: 45px;
+  }
 }
 
 .fs-headline-lg {
-  font-size: 30px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-headline-lg {
+    font-size: 30px;
+  }
 }
 
 .fs-title-lg {
-  font-size: 20px;
+  font-size: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .fs-title-lg {
+    font-size: 20px;
+  }
 }
 
 .fs-title-md {
@@ -218,15 +264,21 @@ Files inside this folder should contain all styles relating to a reusable compon
 }
 
 .scroll-down-button {
-  height: 74px;
-  width: 74px;
+  height: 54px;
+  width: 54px;
   align-items: center;
   border-radius: 100%;
-  border: solid 3px #fff;
+  border: solid 2px #fff;
   cursor: pointer;
   display: flex !important;
   justify-content: center;
   margin: auto;
+}
+@media screen and (min-width: 1200px) {
+  .scroll-down-button {
+    height: 74px;
+    width: 74px;
+  }
 }
 .scroll-down-button > img {
   display: block;
@@ -308,14 +360,39 @@ Files inside this folder can contain specific element styles and layout.
   width: 16px;
 }
 
+.page-blastoff .main .section-project {
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 1200px) {
+  .page-blastoff .main .section-project {
+    margin-bottom: 48px;
+  }
+}
 .page-blastoff .main .section-project .rocket-animation {
   margin: 40px auto;
   max-height: 388px;
   max-width: 640px;
   overflow: hidden;
 }
+.page-blastoff .main .section-information {
+  margin-bottom: 65px;
+}
+@media screen and (min-width: 1200px) {
+  .page-blastoff .main .section-information {
+    margin-bottom: 90px;
+  }
+}
 .page-blastoff .main .section-information .text-container {
   max-width: 520px;
+  min-width: 248px;
+}
+.page-blastoff .main .section-information .text-container:nth-child(2) {
+  min-width: 205px;
+}
+.page-blastoff .main .section-information .information-rocket {
+  max-width: 425px;
+  min-width: 225px;
+  width: 100%;
 }
 .page-blastoff .main .section-about {
   margin-bottom: 220px;

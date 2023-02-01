@@ -27,6 +27,10 @@ $light-blue: map-get(
 .page-blastoff {
   & .main {
     & .section-project {
+      margin-bottom: 70px;
+      @include media(1200px) {
+        margin-bottom: 48px;
+      }
       & .rocket-animation {
         margin: 40px auto;
         max-height: 388px;
@@ -35,8 +39,21 @@ $light-blue: map-get(
       }
     }
     & .section-information {
+      margin-bottom: 65px;
+      @include media(1200px) {
+        margin-bottom: 90px;
+      }
       .text-container {
         max-width: 520px;
+        min-width: 248px;
+        &:nth-child(2) {
+          min-width: 205px;
+        }
+      }
+      & .information-rocket {
+        max-width: 425px;
+        min-width: 225px;
+        width: 100%;
       }
     }
     & .section-about {

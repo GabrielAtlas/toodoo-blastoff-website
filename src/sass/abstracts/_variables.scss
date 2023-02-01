@@ -38,16 +38,28 @@ $map-colors-keys: map-keys(
 
 //classes
 .fs-display-lg {
-  font-size: 60px;
+  font-size: 35px;
+  @include media(1200px) {
+    font-size: 60px;
+  }
 }
 .fs-display-md {
-  font-size: 45px;
+  font-size: 35px;
+  @include media(1200px) {
+    font-size: 45px;
+  }
 }
 .fs-headline-lg {
-  font-size: 30px;
+  font-size: 20px;
+  @include media(1200px) {
+    font-size: 30px;
+  }
 }
 .fs-title-lg {
-  font-size: 20px;
+  @include media(1200px) {
+    font-size: 20px;
+  }
+  font-size: 18px;
 }
 .fs-title-md {
   font-size: 18px;
@@ -88,10 +100,13 @@ $map-colors-keys: map-keys(
   letter-spacing: 0.4em;
 }
 .scroll-down-button {
-  @include square(74px);
+  @include media(1200px) {
+    @include square(74px);
+  }
+  @include square(54px);
   align-items: center;
   border-radius: 100%;
-  border: solid 3px #fff;
+  border: solid 2px #fff;
   cursor: pointer;
   display: flex !important;
   justify-content: center;
