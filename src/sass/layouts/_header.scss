@@ -1,7 +1,7 @@
 .header {
   height: 90px;
   margin-bottom: 40px;
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     height: 130px;
     margin-bottom: 75px;
   }
@@ -20,7 +20,7 @@
     }
   }
   & .header-mobile {
-    @include media(1150px) {
+    @include mediaMin(1150px) {
     }
     & .image-logo {
       max-width: 200px;

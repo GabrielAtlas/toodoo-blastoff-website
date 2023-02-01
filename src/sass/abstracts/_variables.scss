@@ -39,24 +39,24 @@ $map-colors-keys: map-keys(
 //classes
 .fs-display-lg {
   font-size: 35px;
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     font-size: 60px;
   }
 }
 .fs-display-md {
   font-size: 35px;
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     font-size: 45px;
   }
 }
 .fs-headline-lg {
   font-size: 20px;
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     font-size: 30px;
   }
 }
 .fs-title-lg {
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     font-size: 20px;
   }
   font-size: 18px;
@@ -100,7 +100,7 @@ $map-colors-keys: map-keys(
   letter-spacing: 0.4em;
 }
 .scroll-down-button {
-  @include media(1200px) {
+  @include mediaMin(1200px) {
     @include square(74px);
   }
   @include square(54px);
