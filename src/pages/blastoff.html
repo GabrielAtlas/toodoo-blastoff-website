@@ -13,7 +13,7 @@
 
 <body class="bg-blue overflow-x-hidden overflow-y-scroll page-blastoff">
   <header class="header">
-    <section class="fixed-top">
+    <section class="header-desktop fixed-top d-none d-xl-block">
       <section class="bg-magenta container-fluid">
         <div class="d-flex justify-content-between container">
           <div>
@@ -110,6 +110,16 @@
           </div>
         </div>
       </section>
+    </section>
+    <section class="header-mobile fixed-top d-xl-none bg-white">
+      <div class="container d-flex justify-content-between align-items-center py-4">
+        <figure class="image-logo m-0">
+          <img class="w-100" src="../public/assets/images/toodoo-pink-logo.svg" alt="Toodoo">
+        </figure>
+        <figure class="menu-image m-0 cursor-pointer">
+          <img class="w-100" src="../public/assets/icons/header-mobile-menu.svg" alt="menu">
+        </figure>
+      </div>
     </section>
   </header>
   <main class="main">

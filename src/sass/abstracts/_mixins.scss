@@ -2,3 +2,8 @@
   height: $size;
   width: $size;
 }
+@mixin media($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
