@@ -10,11 +10,6 @@ $map-colors-keys: map-keys(
   $map: $map-colors,
 );
 
-// tags
-body {
-  font-family: $font-primary;
-}
-
 // loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {
@@ -34,6 +29,9 @@ body {
   filter: blur(300px);
   opacity: 0.2;
   position: absolute;
+  @include mediaMax(992px) {
+    @include square(250px);
+  }
 }
 
 %pseudo-element {
@@ -43,19 +41,39 @@ body {
 
 //classes
 .fs-display-lg {
-  font-size: 60px;
+  font-size: 35px;
+  @include mediaMin(1200px) {
+    font-size: 60px;
+  }
 }
 .fs-display-md {
-  font-size: 45px;
+  font-size: 35px;
+  @include mediaMin(1200px) {
+    font-size: 45px;
+  }
 }
 .fs-headline-lg {
-  font-size: 30px;
+  font-size: 20px;
+  @include mediaMin(1200px) {
+    font-size: 30px;
+  }
 }
 .fs-title-lg {
-  font-size: 20px;
+  @include mediaMin(1200px) {
+    font-size: 20px;
+  }
+  font-size: 18px;
 }
 .fs-title-md {
   font-size: 18px;
+}
+
+.bg-blur {
+  background-image: linear-gradient(146.29deg, #fff3 50%, #fff1 97.77%);
+  border-radius: 15px;
+  border: solid 2px #fffa;
+  border-bottom-color: #fff5;
+  border-right-color: #fff5;
 }
 
 .cursor-pointer {
@@ -64,7 +82,6 @@ body {
 
 .light-orbs {
   position: relative;
-
   @extend %pseudo-element;
   &::after {
     @extend %page-orbs;
@@ -85,10 +102,13 @@ body {
   letter-spacing: 0.4em;
 }
 .scroll-down-button {
-  @include square(74px);
+  @include mediaMin(1200px) {
+    @include square(74px);
+  }
+  @include square(54px);
   align-items: center;
   border-radius: 100%;
-  border: solid 3px #fff;
+  border: solid 2px #fff;
   cursor: pointer;
   display: flex !important;
   justify-content: center;
@@ -97,20 +117,5 @@ body {
     display: block;
     max-width: 25px;
     transform: translateY(3px);
-  }
-}
-
-.page-blastoff {
-  & .main {
-    & .rocket-animation {
-      max-height: 388px;
-      max-width: 640px;
-      overflow: hidden;
-    }
-    & .section-information {
-      .text-container {
-        max-width: 520px;
-      }
-    }
   }
 }
