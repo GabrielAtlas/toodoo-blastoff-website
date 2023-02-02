@@ -1,0 +1,38 @@
+label {
+  position: relative;
+
+  span {
+    display: block;
+    padding: 0 4px;
+    background: white;
+    transform: translateY(50%);
+    width: fit-content;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: #ea005a;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 2px solid #ea005a;
+    border-radius: 39px;
+    padding-left: 10px;
+    height: 38px;
+
+    &:focus {
+      border: 2px solid #ea005a;
+    }
+  }
+
+  textarea {
+    height: 116px !important;
+    padding-left: 15px;
+    resize: none;
+  }
+}

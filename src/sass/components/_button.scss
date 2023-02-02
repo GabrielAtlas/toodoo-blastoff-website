@@ -1,7 +1,5 @@
 @use "sass:map";
 
-@import "../abstracts/variables";
-
 .border-inherit {
   border-color: inherit !important;
 }
@@ -14,6 +12,7 @@
   font-weight: 500;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
+  cursor: pointer;
 
   &.ghost {
     background-color: transparent;

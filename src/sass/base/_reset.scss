@@ -1,0 +1,17 @@
+.form-check-input:checked {
+  background-image: url("../../public/assets/icons/check-icon.svg") !important;
+}
+
+.form-check-input:checked[type="checkbox"] {
+  border-width: 2px;
+  outline: 0;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}
+
+.form-check-input:checked {
+  background: none;
+  border-color: #ea005a;
+}
