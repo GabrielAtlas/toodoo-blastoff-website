@@ -26,6 +26,12 @@ $light-blue: map-get(
 
 .page-blastoff {
   & .main {
+    padding-top: 40px;
+    .container {
+      @include mediaMax(576px) {
+        padding: 0 22px;
+      }
+    }
     & .section-project {
       margin-bottom: 70px;
       @include mediaMin(1200px) {
@@ -75,7 +81,7 @@ $light-blue: map-get(
         row-gap: 155px;
         & .about-list-item {
           height: 200px;
-          padding: 20px;
+          padding: 16px;
           position: relative;
           width: 270px;
           @include mediaMin(1200px) {
@@ -100,7 +106,7 @@ $light-blue: map-get(
               }
             }
           }
-          @include mediaMax(1200px) {
+          @include mediaMax(1199px) {
             &:not(:first-child) {
               &::before {
                 content: url(../../public/assets/icons/process-line-dashed-mobile.svg);
@@ -114,20 +120,40 @@ $light-blue: map-get(
         }
       }
       & .text-box {
-        margin: 32px auto 0;
+        @include mediaMax(992px) {
+          font-size: 18px;
+          margin: 23px auto 0;
+        }
         font-size: 22px;
+        margin: 32px auto 0;
         max-width: 720px;
+      }
+      @include mediaMax(576px) {
+        margin-bottom: 60px;
       }
     }
     & .section-professionals {
       margin-bottom: 150px;
+      @include mediaMax(576px) {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
       & .professional-list {
+        display: flex;
         gap: 40px;
+        justify-content: center;
         margin-top: 125px;
+        @include mediaMax(576px) {
+          gap: 19px;
+          justify-content: start;
+        }
         & .professional-list-item {
           flex-grow: 1;
           max-width: 270px;
           min-height: 290px;
+          min-width: 270px;
           padding: 60px 19px 24px;
           position: relative;
           & .profile-image {
@@ -142,6 +168,9 @@ $light-blue: map-get(
             border: solid 2px #e1cfd6bb;
           }
         }
+      }
+      @include mediaMax(576px) {
+        margin-bottom: 80px;
       }
     }
     & .section-apprenticeship {
@@ -173,10 +202,11 @@ $light-blue: map-get(
           background-position-y: center;
           background-repeat: no-repeat;
           border-radius: 100%;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 13%);
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 13%);
+          z-index: 1;
           &.previous {
             background-image: url("data:image/svg+xml,%3Csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.6176 0.374196C9.86245 0.613866 10 0.938885 10 1.27778C10 1.61667 9.86245 1.94169 9.6176 2.18136L3.15257 8.50772L9.6176 14.8341C9.85551 15.0751 9.98716 15.398 9.98418 15.7331C9.9812 16.0682 9.84385 16.3887 9.60169 16.6257C9.35954 16.8626 9.03196 16.997 8.68951 17C8.34706 17.0029 8.01715 16.874 7.77082 16.6412L0.382399 9.4113C0.137548 9.17163 0 8.84661 0 8.50772C0 8.16882 0.137548 7.8438 0.382399 7.60413L7.77082 0.374196C8.01575 0.134599 8.34789 0 8.69421 0C9.04053 0 9.37268 0.134599 9.6176 0.374196Z' fill='white'/%3E%3C/svg%3E%0A");
             left: -20px;
@@ -186,6 +216,14 @@ $light-blue: map-get(
             background-image: url("data:image/svg+xml,%3Csvg width='9' height='17' viewBox='0 0 9 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.344159 16.6258C0.123794 16.3861 0 16.0611 0 15.7222C0 15.3833 0.123794 15.0583 0.344159 14.8186L6.16269 8.49228L0.344159 2.16593C0.130039 1.92489 0.0115592 1.60205 0.0142373 1.26695C0.0169155 0.931845 0.140538 0.611292 0.358478 0.374332C0.576418 0.137371 0.871238 0.00296021 1.17944 4.95911e-05C1.48764 -0.00286293 1.78457 0.125957 2.00626 0.358765L8.65584 7.5887C8.87621 7.82837 9 8.15339 9 8.49228C9 8.83118 8.87621 9.1562 8.65584 9.39587L2.00626 16.6258C1.78583 16.8654 1.4869 17 1.17521 17C0.863519 17 0.564591 16.8654 0.344159 16.6258Z' fill='white'/%3E%3C/svg%3E%0A");
             background-position-x: 17px;
             right: -20px;
+          }
+          @include mediaMax(576px) {
+            &.previous {
+              left: -15px;
+            }
+            &.next {
+              right: -15px;
+            }
           }
         }
         & .apprenticeship-list-item {
@@ -199,12 +237,16 @@ $light-blue: map-get(
           transition: 0.3s;
           width: 200px;
           &.active {
+            justify-content: start;
             width: 540px;
             & .apprenticeship-item-subtitle {
               font-size: 24px;
             }
             & .apprenticeship-elements-hidden {
-              display: block;
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+              justify-content: flex-end;
               visibility: initial;
             }
           }
@@ -221,12 +263,59 @@ $light-blue: map-get(
             transition: 0.3s;
             visibility: hidden;
             & .apprenticeship-item-info {
-              height: 120px;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 4;
+              display: -webkit-box;
+              max-height: 120px;
+              overflow: hidden;
               overflow: hidden;
               text-overflow: ellipsis;
             }
             & .toodoo-button {
               width: fit-content;
+            }
+          }
+          @include mediaMax(1200px) {
+            height: 370px;
+            padding: 35px 16px;
+            &.active {
+              min-width: 307px;
+              padding: 35px;
+            }
+            & .apprenticeship-item-title {
+              font-size: 35px;
+              margin-bottom: 5px;
+            }
+            & .apprenticeship-item-subtitle {
+              font-size: 20px;
+              margin-bottom: 5px;
+            }
+            & .apprenticeship-item-info {
+              font-size: 18px;
+              line-clamp: 7;
+              margin-bottom: 16px;
+            }
+          }
+          @include mediaMax(992px) {
+            display: none;
+            &.active {
+              animation: appear 0.3s 1 backwards;
+              display: flex;
+              margin: auto;
+              max-width: 540px;
+            }
+            @keyframes appear {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+          }
+          @include mediaMax(576px) {
+            &.active {
+              max-width: 309px;
             }
           }
         }
@@ -487,6 +576,9 @@ $light-blue: map-get(
           transform: translate(-50%, -20%);
         }
       }
+    }
+    @include mediaMin(1200px) {
+      padding-top: 75px;
     }
   }
 }

@@ -29,6 +29,9 @@ $map-colors-keys: map-keys(
   filter: blur(300px);
   opacity: 0.2;
   position: absolute;
+  @include mediaMax(992px) {
+    @include square(250px);
+  }
 }
 
 %pseudo-element {
@@ -79,7 +82,6 @@ $map-colors-keys: map-keys(
 
 .light-orbs {
   position: relative;
-
   @extend %pseudo-element;
   &::after {
     @extend %page-orbs;
