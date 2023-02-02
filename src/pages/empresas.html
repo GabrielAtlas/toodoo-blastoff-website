@@ -166,7 +166,7 @@
             <div class="people-gif"></div>
           </div>
           <div class="position-relative">
-            <div class="sorry-go-ahead"></div>
+            <div class="sorry-go-ahead d-none d-md-block"></div>
             <img
               class="rounded"
               src="../public/assets/gifs/empresas-1.gif"
@@ -231,8 +231,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 order-md-4">
+              <div class="col-md-6 order-md-4 mb-4">
                 <img
+                  class="img-fluid"
                   src="../public/assets/images/desafios-grid-2x.png"
                   width="550"
                   height="651"
@@ -277,7 +278,9 @@
               metodologias ágeis e se desenvolverão numa linguagem e/ou
               framework específico.
             </p>
-            <div class="d-flex gap-3 mt-5">
+            <div
+              class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5"
+            >
               <button class="toodoo-button">PROGRAMAÇÃO</button>
               <button class="toodoo-button ghost">METODOLOGIAS ÁGEIS</button>
               <button class="toodoo-button ghost">
@@ -291,6 +294,7 @@
               <div class="col-md-6">
                 <div class="d-flex align-items-start gap-3">
                   <img
+                    class="img-fluid"
                     src="../public/assets/images/toodoo-default-logo.svg"
                     alt="Toodoo Logo"
                   />
@@ -349,22 +353,32 @@
             <div
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
-              <form class="toodoo-form">
+              <form class="toodoo-form needs-validation">
                 <label for="name">
                   <span>NOME</span>
-                  <input id="name" type="text" class="toodoo-input" />
+                  <input id="name" type="text" class="toodoo-input" required />
                 </label>
                 <label for="email">
                   <span>E-MAIL</span>
-                  <input id="email" type="email" class="toodoo-input" />
+                  <input
+                    id="email"
+                    type="email"
+                    class="toodoo-input"
+                    required
+                  />
                 </label>
                 <label for="company">
                   <span>EMPRESA</span>
-                  <input id="company" type="text" class="toodoo-input" />
+                  <input
+                    id="company"
+                    type="text"
+                    class="toodoo-input"
+                    required
+                  />
                 </label>
                 <label for="message">
                   <span>DEIXE SUA MENSAGEM</span>
-                  <textarea id="message"></textarea>
+                  <textarea id="message" required></textarea>
                 </label>
                 <div class="form-check py-3">
                   <input
@@ -373,10 +387,15 @@
                     value=""
                     id="flexCheckChecked"
                     checked
+                    required
                   />
                   <label class="form-check-label" for="flexCheckChecked">
                     Autorizo a Toodoo a entrar em contato comigo.
                   </label>
+                  <div class="invalid-feedback">
+                    Você precisa autorizar a Toodoo a entrar em contato com
+                    você.
+                  </div>
                 </div>
                 <button class="toodoo-button w-100" type="submit">
                   ENVIAR
@@ -397,7 +416,7 @@
               </h1>
               <button class="toodoo-button mt-3">VAMOS CONVERSAR?</button>
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col-md-6 text-end d-none d-md-block">
               <img
                 src="../public/assets/images/toodoo-avatar.png"
                 alt="Mascote Toodoo"
@@ -436,9 +455,7 @@
             </div>
 
             <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
-              <div
-                class="social-icons d-flex flex-column align-items-center text-center"
-              >
+              <div class="d-flex flex-column align-items-center text-center">
                 <p>NOSSAS REDES SOCIAIS</p>
                 <ul class="d-flex gap-4 align-items-center list-unstyled py-2">
                   <li>

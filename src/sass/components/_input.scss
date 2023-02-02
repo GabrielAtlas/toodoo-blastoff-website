@@ -24,6 +24,10 @@ label {
     border-radius: 39px;
     padding-left: 10px;
     height: 38px;
+
+    &:focus {
+      border: 2px solid #ea005a;
+    }
   }
 
   textarea {

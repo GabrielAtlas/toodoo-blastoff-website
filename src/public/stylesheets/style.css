@@ -195,6 +195,10 @@ label textarea {
   padding-left: 10px;
   height: 38px;
 }
+label input:focus,
+label textarea:focus {
+  border: 2px solid #ea005a;
+}
 label textarea {
   height: 116px !important;
   padding-left: 15px;
