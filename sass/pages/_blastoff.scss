@@ -89,7 +89,7 @@ $light-blue: map-get(
               margin-top: 125px;
               &:not(:first-child) {
                 &::before {
-                  content: url(../../public/assets/images/about-lineway.svg);
+                  content: url(../assets/images/about-lineway.svg);
                   position: absolute;
                   right: calc(50% - 8px);
                   top: calc(-100% - 25px);
@@ -100,7 +100,7 @@ $light-blue: map-get(
             &:nth-child(even) {
               &::before {
                 bottom: calc(-100% - 25px);
-                content: url(../../public/assets/images/about-lineway.svg);
+                content: url(../assets/images/about-lineway.svg);
                 position: absolute;
                 right: calc(50% - 8px);
               }
@@ -109,7 +109,7 @@ $light-blue: map-get(
           @include mediaMax(1199px) {
             &:not(:first-child) {
               &::before {
-                content: url(../../public/assets/icons/process-line-dashed-mobile.svg);
+                content: url(../assets/icons/process-line-dashed-mobile.svg);
                 left: 50%;
                 position: absolute;
                 top: 0;
@@ -336,7 +336,7 @@ $light-blue: map-get(
           &:nth-child(1n + 2) {
             & .process-secondary-item:first-child {
               &::before {
-                content: url("../../public/assets/icons/process-item-line-dashed-top.svg");
+                content: url("../assets/icons/process-item-line-dashed-top.svg");
                 left: 50%;
                 position: absolute;
                 transform: translate(-50%, calc(-100% - 24px));
@@ -350,7 +350,7 @@ $light-blue: map-get(
               & .process-secondary-item {
                 &:nth-child(1n + 2) {
                   &::before {
-                    content: url("../../public/assets/icons/process-item-line-dashed.svg");
+                    content: url("../assets/icons/process-item-line-dashed.svg");
                     display: block;
                     left: 0;
                     position: absolute;
@@ -373,7 +373,7 @@ $light-blue: map-get(
               text-align: center;
               &:not(:nth-child(3n - 2)) {
                 &::before {
-                  content: url("../../public/assets/icons/process-item-line-dashed.svg");
+                  content: url("../assets/icons/process-item-line-dashed.svg");
                   display: block;
                   position: absolute;
                   right: 0;
@@ -557,7 +557,7 @@ $light-blue: map-get(
           }
         }
       }
-      @include mediaMax(992px){
+      @include mediaMax(992px) {
         margin-bottom: 60px;
       }
     }
@@ -569,7 +569,7 @@ $light-blue: map-get(
           margin: auto;
           max-width: 605px;
         }
-        @include mediaMax(576px){
+        @include mediaMax(576px) {
           padding: 60px 20px 50px;
         }
       }
