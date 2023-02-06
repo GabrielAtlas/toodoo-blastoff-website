@@ -232,6 +232,51 @@ label textarea {
   resize: none;
 }
 
+.blog .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -40px;
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #707070;
+}
+
+.carousel-control-prev {
+  left: -12%;
+}
+
+.carousel-control-next {
+  right: -12%;
+}
+
+.carousel-indicators {
+  bottom: auto;
+  padding: 20px 0px;
+}
+
+.carousel-indicator {
+  width: 8px !important;
+  height: 8px !important;
+  border: none !important;
+  border-radius: 40px;
+  background: #090d68 !important;
+  opacity: 1 !important;
+  transition: 0.3s !important;
+}
+.carousel-indicator.active {
+  background: #ea005a !important;
+  width: 16px !important;
+}
+
 /*
 This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
