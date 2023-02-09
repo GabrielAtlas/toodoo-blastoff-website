@@ -10,6 +10,21 @@ $map-colors-keys: map-keys(
   $map: $map-colors,
 );
 
+// variables
+
+$magenta: map-get(
+  $map: $map-colors,
+  $key: "magenta",
+);
+$light-blue: map-get(
+  $map: $map-colors,
+  $key: "light-blue",
+);
+$blue: map-get(
+  $map: $map-colors,
+  $key: "blue",
+);
+
 // loop
 @each $key in $map-colors-keys {
   .bg-#{$key} {

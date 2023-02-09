@@ -1,12 +1,3 @@
-$magenta: map-get(
-  $map: $map-colors,
-  $key: "magenta",
-);
-$light-blue: map-get(
-  $map: $map-colors,
-  $key: "light-blue",
-);
-
 %carousel-tip {
   align-items: center;
   display: flex;

@@ -1,15 +1,22 @@
 const apprenticeshipButtons = document.querySelectorAll(
   ".apprenticeship-list > .apprenticeship-button",
 );
-apprenticeshipButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const currentItem = document.querySelector(
-      ".apprenticeship-list > .apprenticeship-list-item.active",
-    );
-    const nextItem = button.classList.contains("previous") ? -1 : 1;
-    updateApprenticeshipCarousel(currentItem, nextItem);
-  });
-});
+const destinyScrollDown = document.querySelector(
+  ".section-information",
+).offsetTop;
+const scrollDownButton = document.querySelector(
+  ".page-blastoff .scroll-down-button",
+);
+const headerDesktopHeight = document.querySelector(
+  ".header > .header-desktop",
+).offsetHeight;
+const headerMobileHeight = document.querySelector(
+  ".header > .header-mobile",
+).offsetHeight;
+
+const mobileMenuButton = document.querySelectorAll(
+  ".header-mobile-bar > .mobile-menu-button",
+);
 
 function updateApprenticeshipCarousel(currentItem, nextItem) {
   const valueCurrentItem = currentItem.getAttribute("data-list-item");
@@ -38,9 +45,28 @@ function updateApprenticeshipCarousel(currentItem, nextItem) {
   newCurrentTipItem.classList.add("active");
 }
 
-const destinyScrollDown = document.querySelector(".section-information").offsetTop;
-const scrollDownButton = document.querySelector(".page-blastoff .scroll-down-button");
-const headerHeight = document.querySelector('.header > section').offsetHeight;
+apprenticeshipButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentItem = document.querySelector(
+      ".apprenticeship-list > .apprenticeship-list-item.active",
+    );
+    const nextItem = button.classList.contains("previous") ? -1 : 1;
+    updateApprenticeshipCarousel(currentItem, nextItem);
+  });
+});
+
+mobileMenuButton.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".header-mobile").classList.toggle("active");
+  });
+});
+
 scrollDownButton.addEventListener("click", () => {
-  window.scroll(0, destinyScrollDown - headerHeight);
+  if (window.innerWidth >= 1200) {
+    window.scroll(0, destinyScrollDown - headerDesktopHeight);
+    console.log("desktop");
+  } else {
+    console.log("mobile");
+    window.scroll(0, destinyScrollDown);
+  }
 });
