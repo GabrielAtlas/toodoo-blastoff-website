@@ -259,7 +259,7 @@ label textarea {
 }
 
 .carousel-indicators {
-  bottom: auto;
+  bottom: -79px;
   padding: 20px 0px;
 }
 
@@ -275,6 +275,49 @@ label textarea {
 .carousel-indicator.active {
   background: #ea005a !important;
   width: 16px !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: none !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA005A'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA005A'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.card {
+  position: relative;
+  border: 2px solid #090d68;
+  border-radius: 20px;
+  --bs-card-spacer-y: 1.2rem;
+  --bs-card-spacer-x: 1rem;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  bottom: 0;
+  background-color: white;
+  background-image: url("../../public/assets/icons/mention-icon.svg");
+}
+
+.card-feedback {
+  margin-left: 15px;
+}
+.card-feedback h5,
+.card-feedback p {
+  color: #090d68;
 }
 
 /*
