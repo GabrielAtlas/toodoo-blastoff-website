@@ -98,6 +98,10 @@ $third-color: map-get($map-colors, "blue");
   z-index: -1;
   left: -45%;
   top: 60%;
+
+  @media only screen and (max-width: 600px) {
+    right: -170%;
+  }
 }
 
 .people-gif {

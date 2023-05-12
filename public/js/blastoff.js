@@ -14,10 +14,6 @@ const headerMobileHeight = document.querySelector(
   ".header > .header-mobile",
 ).offsetHeight;
 
-const mobileMenuButton = document.querySelectorAll(
-  ".header-mobile-bar > .mobile-menu-button",
-);
-
 function updateApprenticeshipCarousel(currentItem, nextItem) {
   const valueCurrentItem = currentItem.getAttribute("data-list-item");
   const valueNextItem = () => {
@@ -52,12 +48,6 @@ apprenticeshipButtons.forEach((button) => {
     );
     const nextItem = button.classList.contains("previous") ? -1 : 1;
     updateApprenticeshipCarousel(currentItem, nextItem);
-  });
-});
-
-mobileMenuButton.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document.querySelector(".header-mobile").classList.toggle("active");
   });
 });
 

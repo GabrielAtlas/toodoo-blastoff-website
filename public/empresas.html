@@ -17,6 +17,8 @@
       crossorigin="anonymous"
     />
     <link href="./stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/responsive.js"></script>
+    <script defer src="./js/empresas.js"></script>
   </head>
   <body>
     <header class="header">
@@ -126,7 +128,7 @@
       </section>
       <section class="header-mobile fixed-top d-xl-none bg-white">
         <div
-          class="container d-flex justify-content-between align-items-center py-4"
+          class="header-mobile-bar d-flex justify-content-between align-items-center p-4"
         >
           <figure class="image-logo m-0">
             <img
@@ -135,7 +137,16 @@
               alt="Toodoo"
             />
           </figure>
-          <figure class="menu-image m-0 cursor-pointer">
+          <figure
+            class="menu-image mobile-menu-button close m-0 cursor-pointer"
+          >
+            <img
+              class="w-100"
+              src="./assets/icons/header-mobile-menu-close.svg"
+              alt="menu"
+            />
+          </figure>
+          <figure class="menu-image mobile-menu-button m-0 cursor-pointer">
             <img
               class="w-100"
               src="./assets/icons/header-mobile-menu.svg"
@@ -143,9 +154,116 @@
             />
           </figure>
         </div>
+        <nav class="header-mobile-menu">
+          <div class="search-bar-container">
+            <div class="search-bar">
+              <figure class="m-0">
+                <img
+                  class="w-100"
+                  src="assets/icons/search-magenta.svg"
+                  alt="pesquisa"
+                />
+              </figure>
+              <input type="text" placeholder="Buscar na toodoo" />
+            </div>
+          </div>
+          <ul class="header-mobile-list list-unstyled">
+            <li class="mobile-menu-item">
+              <a href="#">Sobre</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#">Serviços</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#">Cases</a>
+            </li>
+            <li class="mobile-menu-item">
+              <div
+                class="accordion accordion-flush"
+                id="navigation-menu-option-blastoff"
+              >
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navigation-option-blastoff"
+                      aria-expanded="false"
+                      aria-controls="navigation-option-blastoff"
+                    >
+                      Blastoff
+                    </button>
+                  </h2>
+                  <div
+                    id="navigation-option-blastoff"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#navigation-menu-option-blastoff"
+                  >
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li><a href="#"> Para aluno </a></li>
+                        <li><a href="#"> Para empresas </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#">News</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#">Contato</a>
+            </li>
+          </ul>
+          <ul class="social-media-list list-unstyled">
+            <li class="social-media-item">
+              <figure>
+                <img src="assets/icons/facebook-magenta.svg" alt="facebook" />
+              </figure>
+            </li>
+            <li class="social-media-item">
+              <figure>
+                <img src="assets/icons/instagram-magenta.svg" alt="instagram" />
+              </figure>
+            </li>
+            <li class="social-media-item">
+              <figure>
+                <img src="assets/icons/linkedin-magenta.svg" alt="linkedin" />
+              </figure>
+            </li>
+            <li class="social-media-item">
+              <figure>
+                <img src="assets/icons/twitter-magenta.svg" alt="twitter" />
+              </figure>
+            </li>
+            <li class="social-media-item">
+              <figure>
+                <img src="assets/icons/youtube-magenta.svg" alt="youtube" />
+              </figure>
+            </li>
+          </ul>
+          <p class="color-magenta">Nos acompanhe</p>
+          <div
+            class="d-flex align-items-center justify-content-center gap-2 mx-auto"
+          >
+            <figure class="m-0">
+              <img src="./assets/icons/globe-black.svg" alt="globe" />
+            </figure>
+            <select
+              class="select-language cursor-pointer text-white"
+              name="language"
+              id="header-language"
+            >
+              <option class="text-black" value="PT-BR">EN</option>
+              <option class="text-black" value="PT-BR">PT-BR</option>
+            </select>
+          </div>
+        </nav>
       </section>
     </header>
-
     <main>
       <section id="branding-section" class="branding position-relative py-5">
         <div class="container d-flex justify-content-between pt-5">
@@ -278,14 +396,8 @@
             </p>
             <div
               class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5"
-            >
-              <button class="toodoo-button">PROGRAMAÇÃO</button>
-              <button class="toodoo-button ghost">METODOLOGIAS ÁGEIS</button>
-              <button class="toodoo-button ghost">
-                RESIDÊNCIA DE SOFTWARE
-              </button>
-              <button class="toodoo-button ghost">SOFT SKILLS</button>
-            </div>
+              id="methodology-buttons"
+            ></div>
           </div>
           <div class="methodology-content mt-5">
             <div class="row">
@@ -311,7 +423,7 @@
               </div>
               <div class="col-md-6">
                 <img
-                  class="rounded"
+                  class="rounded img-fluid"
                   width="568"
                   height="368"
                   src="./assets/images/methodology-1.png"
@@ -342,7 +454,7 @@
       <section id="form-section">
         <div class="form-section-container container py-5">
           <div class="row py-5">
-            <div class="form-section-texts col-md-6">
+            <div class="form-section-texts col-md-6 mb-5">
               <h1>
                 E aí, bora formar novos profissionais <strong>juntos?</strong>
               </h1>
@@ -407,12 +519,12 @@
       <section id="solution-section">
         <div class="solution-section-container container pt-5">
           <div class="row pt-5">
-            <div class="solution-section-texts col-md-6">
+            <div class="solution-section-texts col-md-6 mb-5">
               <h1>
                 estamos prontos para criar uma <strong>solução</strong> para o
                 seu problema
               </h1>
-              <button class="toodoo-button mt-3">VAMOS CONVERSAR?</button>
+              <button class="toodoo-button mt-3 mb-5">VAMOS CONVERSAR?</button>
             </div>
             <div class="col-md-6 text-end d-none d-md-block">
               <img
