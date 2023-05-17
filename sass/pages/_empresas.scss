@@ -173,6 +173,44 @@ $third-color: map-get($map-colors, "blue");
   }
 }
 
+.feedback-content {
+  display: flex;
+  gap: 41px;
+  justify-content: center;
+}
+
+.feedback-box {
+  border: 2px solid #090d68;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  padding: 18px;
+  padding-bottom: 14px;
+  gap: 15px;
+  width: 500px;
+
+  svg {
+    position: absolute;
+    bottom: -10px;
+    left: -11px;
+    background: white;
+    padding: 8px 6px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  .feedback-description {
+    color: #090d68;
+
+    span {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+  }
+}
+
 .methodology-heading,
 .our-job-heading,
 .feedback-heading {
