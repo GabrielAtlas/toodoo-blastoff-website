@@ -85,7 +85,7 @@
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="/blastoff">
                   Blastoff
                 </a>
               </li>
