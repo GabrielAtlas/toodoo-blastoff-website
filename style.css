@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/*
+Theme Name: Blastoff
+Author: Jogão Gabriel, Lucas Carlos
+Author URI: 
+Description: Tema desenvolvido para o site Blastoff, iniciativa Toodoo.
+Version: 1.0
+License: MIT.
+*/
 /*
 This file is used to contain all vendor imports.
 */
@@ -771,7 +780,7 @@ footer ul {
   top: -10%;
   border-radius: 15px;
   z-index: 2;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.4), rgba(9, 13, 104, 0.4)), url("../assets/gifs/empresas-2.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.4), rgba(9, 13, 104, 0.4)), url("./public/assets/gifs/empresas-2.gif");
   background-size: 177px 110px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -782,7 +791,7 @@ footer ul {
   position: absolute;
   width: 292px;
   height: 180px;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.6), rgba(9, 13, 104, 0.6)), url("../assets/gifs/empresas-3.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.6), rgba(9, 13, 104, 0.6)), url("./public/assets/gifs/empresas-3.gif");
   background-size: 292px 180px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -803,7 +812,7 @@ footer ul {
   position: absolute;
   width: 187px;
   height: 113px;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.8), rgba(9, 13, 104, 0.8)), url("../assets/gifs/empresas-4.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.8), rgba(9, 13, 104, 0.8)), url("./public/assets/gifs/empresas-4.gif");
   background-size: 187px 113px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -908,7 +917,7 @@ footer ul {
 
 #form-section {
   position: relative;
-  background: url("../assets/images/bg-cam-people.png");
+  background: url("./public/assets/images/bg-cam-people.png");
 }
 #form-section::before {
   content: "";
@@ -1056,7 +1065,7 @@ footer ul {
     margin-top: 125px;
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd):not(:first-child)::before {
-    content: url(../assets/images/about-lineway.svg);
+    content: url(./public/assets/images/about-lineway.svg);
     position: absolute;
     right: calc(50% - 8px);
     top: calc(-100% - 25px);
@@ -1064,14 +1073,14 @@ footer ul {
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(even)::before {
     bottom: calc(-100% - 25px);
-    content: url(../assets/images/about-lineway.svg);
+    content: url(./public/assets/images/about-lineway.svg);
     position: absolute;
     right: calc(50% - 8px);
   }
 }
 @media screen and (max-width: 1199px) {
   .page-blastoff .main .section-about .about-list .about-list-item:not(:first-child)::before {
-    content: url(../assets/icons/process-line-dashed-mobile.svg);
+    content: url(./public/assets/icons/process-line-dashed-mobile.svg);
     left: 50%;
     position: absolute;
     top: 0;
@@ -1308,7 +1317,7 @@ footer ul {
   row-gap: 160px;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(1n+2) .process-secondary-item:first-child::before {
-  content: url("../assets/icons/process-item-line-dashed-top.svg");
+  content: url("./public/assets/icons/process-item-line-dashed-top.svg");
   left: 50%;
   position: absolute;
   transform: translate(-50%, calc(-100% - 24px));
@@ -1318,7 +1327,7 @@ footer ul {
   flex-direction: row-reverse;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(2n+2) .process-secondary-list .process-secondary-item:nth-child(1n+2)::before {
-  content: url("../assets/icons/process-item-line-dashed.svg");
+  content: url("./public/assets/icons/process-item-line-dashed.svg");
   display: block;
   left: 0;
   position: absolute;
@@ -1337,7 +1346,7 @@ footer ul {
   text-align: center;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item:not(:nth-child(3n-2))::before {
-  content: url("../assets/icons/process-item-line-dashed.svg");
+  content: url("./public/assets/icons/process-item-line-dashed.svg");
   display: block;
   position: absolute;
   right: 0;
