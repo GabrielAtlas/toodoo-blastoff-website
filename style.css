@@ -159,7 +159,7 @@ This file is used to contain all base imports.
 Files inside this folder can contain global styles used in the project.
 */
 .form-check-input:checked {
-  background-image: url("../assets/icons/check-icon.svg") !important;
+  background-image: url("./public/assets/icons/check-icon.svg") !important;
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -174,6 +174,15 @@ input[type=radio]:focus {
 .form-check-input:checked {
   background: none;
   border-color: #ea005a;
+}
+
+.owl-carousel .owl-item img {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.wpcf7-list-item {
+  margin: 0 !important;
 }
 
 body,
@@ -206,12 +215,13 @@ Files inside this folder should contain all styles relating to a reusable compon
   color: #ea005a;
 }
 
-label {
+.toodoo-form .input-wrapper {
   position: relative;
 }
-label span {
+.toodoo-form .input-wrapper .label-title {
   display: block;
   padding: 0 4px;
+  position: relative;
   background: white;
   transform: translateY(50%);
   width: fit-content;
@@ -221,22 +231,23 @@ label span {
   line-height: 17px;
   letter-spacing: 0.005em;
   text-transform: uppercase;
+  z-index: 20;
   color: #ea005a;
 }
-label input,
-label textarea {
+.toodoo-form .input-wrapper input,
+.toodoo-form .input-wrapper textarea {
   width: 100%;
   border: 2px solid #ea005a;
   border-radius: 39px;
   padding-left: 10px;
   height: 38px;
 }
-label input:focus,
-label textarea:focus {
+.toodoo-form .input-wrapper input:focus,
+.toodoo-form .input-wrapper textarea:focus {
   border: 2px solid #ea005a;
   outline: none;
 }
-label textarea {
+.toodoo-form .input-wrapper textarea {
   height: 116px !important;
   padding-left: 15px;
   resize: none;
@@ -865,12 +876,6 @@ footer ul {
 }
 .rocket-section p strong {
   color: #00eabd;
-}
-
-.feedback-content {
-  display: flex;
-  gap: 41px;
-  justify-content: center;
 }
 
 .feedback-box {

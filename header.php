@@ -10,6 +10,7 @@
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="https://73p545.a2cdn1.secureserver.net/wp-content/uploads/2021/11/cropped-favicon-todoo-32x32.png" sizes="32x32" />
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/blastoff.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <?php wp_head(); ?>
 </head>
 

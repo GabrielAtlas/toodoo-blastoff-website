@@ -1,5 +1,5 @@
 .form-check-input:checked {
-  background-image: url("../assets/icons/check-icon.svg") !important;
+  background-image: url("./public/assets/icons/check-icon.svg") !important;
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -14,4 +14,17 @@ input[type="radio"]:focus {
 .form-check-input:checked {
   background: none;
   border-color: #ea005a;
+}
+
+.owl-carousel {
+  .owl-item {
+    img {
+      width: 65px !important;
+      height: 65px !important;
+    }
+  }
+}
+
+.wpcf7-list-item {
+  margin: 0 !important;
 }

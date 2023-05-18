@@ -173,12 +173,6 @@ $third-color: map-get($map-colors, "blue");
   }
 }
 
-.feedback-content {
-  display: flex;
-  gap: 41px;
-  justify-content: center;
-}
-
 .feedback-box {
   border: 2px solid #090d68;
   border-radius: 20px;
