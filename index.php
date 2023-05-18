@@ -1,213 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BlastOff</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link href="./stylesheets/style.css" rel="stylesheet" type="text/css" />
-  <script defer src="./js/blastoff.js"></script>
-</head>
-
-<body class="bg-blue overflow-x-hidden overflow-y-scroll page-blastoff">
-  <header class="header">
-    <section class="header-desktop fixed-top d-none d-xl-block">
-      <section class="bg-magenta container-fluid">
-        <div class="d-flex justify-content-between container">
-          <div>
-            <ul class="d-flex gap-2 align-items-center list-unstyled m-0 py-2">
-              <li>
-                <a href="#">
-                  <figure class="m-0">
-                    <img src="./assets/icons/facebook.svg" alt="facebook">
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure class="m-0">
-                    <img src="./assets/icons/instagram.svg" alt="instagram">
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure class="m-0">
-                    <img src="./assets/icons/behance.svg" alt="behance">
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure class="m-0">
-                    <img src="./assets/icons/linkedin.svg" alt="linkedin">
-                  </figure>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="d-flex align-items-center gap-2">
-            <figure class="m-0">
-              <img src="./assets/icons/globe.svg" alt="globe">
-            </figure>
-            <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-              <option class="text-black" value="PT-BR">EN</option>
-              <option class="text-black" value="PT-BR">PT-BR</option>
-            </select>
-          </div>
-        </div>
-      </section>
-      <section class="bg-white container-fluid">
-        <div class="container py-4 d-flex align-items-center justify-content-between">
-          <a href="#">
-            <figure class="m-0">
-              <img src="./assets/images/toodoo-pink-logo.svg" alt="">
-            </figure>
-          </a>
-          <nav>
-            <ul class="list-unstyled d-flex gap-5 m-0 fw-medium text-uppercase">
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  Sobre
-                </a>
-              </li>
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  Serviços
-                </a>
-              </li>
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  Cases
-                </a>
-              </li>
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  Blastoff
-                </a>
-              </li>
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  News
-                </a>
-              </li>
-              <li>
-                <a class="color-blue text-decoration-none" href="#">
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="d-flex align-content-center gap-3">
-            <div class="toodoo-button ghost">
-              Vem pra Toodoo
-            </div>
-            <figure class="m-0 d-flex align-content-center cursor-pointer">
-              <img src="./assets/icons/search-magenta.svg" alt="search">
-            </figure>
-          </div>
-        </div>
-      </section>
-    </section>
-    <section class="header-mobile fixed-top d-xl-none bg-white active">
-      <div class="header-mobile-bar d-flex justify-content-between align-items-center p-4">
-        <figure class="image-logo m-0">
-          <img class="w-100" src="./assets/images/toodoo-pink-logo.svg" alt="Toodoo">
-        </figure>
-        <figure class="menu-image mobile-menu-button close m-0 cursor-pointer">
-          <img class="w-100" src="./assets/icons/header-mobile-menu-close.svg" alt="menu">
-        </figure>
-        <figure class="menu-image mobile-menu-button m-0 cursor-pointer">
-          <img class="w-100" src="./assets/icons/header-mobile-menu.svg" alt="menu">
-        </figure>
-      </div>
-      <nav class="header-mobile-menu">
-        <div class="search-bar-container">
-          <div class="search-bar">
-            <figure class="m-0">
-              <img class="w-100" src="assets/icons/search-magenta.svg" alt="pesquisa">
-            </figure>
-            <input type="text" placeholder="Buscar na toodoo">
-          </div>
-        </div>
-        <ul class="header-mobile-list list-unstyled">
-          <li class="mobile-menu-item">
-            <a href="#">Sobre</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a href="#">Serviços</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a href="#">Cases</a>
-          </li>
-          <li class="mobile-menu-item">
-            <div class="accordion accordion-flush" id="navigation-menu-option-blastoff">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-option-blastoff" aria-expanded="false" aria-controls="navigation-option-blastoff">
-                    Blastoff
-                  </button>
-                </h2>
-                <div id="navigation-option-blastoff" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#navigation-menu-option-blastoff">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled">
-                      <li><a href="#"> Para aluno </a></li>
-                      <li><a href="#"> Para empresas </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mobile-menu-item">
-            <a href="#">News</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a href="#">Contato</a>
-          </li>
-        </ul>
-        <ul class="social-media-list list-unstyled">
-          <li class="social-media-item">
-            <figure>
-              <img src="assets/icons/facebook-magenta.svg" alt="facebook">
-            </figure>
-          </li>
-          <li class="social-media-item">
-            <figure>
-              <img src="assets/icons/instagram-magenta.svg" alt="instagram">
-            </figure>
-          </li>
-          <li class="social-media-item">
-            <figure>
-              <img src="assets/icons/linkedin-magenta.svg" alt="linkedin">
-            </figure>
-          </li>
-          <li class="social-media-item">
-            <figure>
-              <img src="assets/icons/twitter-magenta.svg" alt="twitter">
-            </figure>
-          </li>
-          <li class="social-media-item">
-            <figure>
-              <img src="assets/icons/youtube-magenta.svg" alt="youtube">
-            </figure>
-          </li>
-        </ul>
-        <p class="color-magenta">Nos acompanhe</p>
-        <div class="d-flex align-items-center justify-content-center gap-2 mx-auto">
-          <figure class="m-0">
-            <img src="./assets/icons/globe-black.svg" alt="globe">
-          </figure>
-          <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-            <option class="text-black" value="PT-BR">EN</option>
-            <option class="text-black" value="PT-BR">PT-BR</option>
-          </select>
-        </div>
-      </nav>
-    </section>
-  </header>
+<?php get_header();?>
   <main class="main overflow-hidden">
     <section class="section-project light-orbs">
       <div class="container">
@@ -216,14 +7,14 @@
           <h2 class="fs-display-md text-white text-uppercase fw-medium m-0">BlastOff</h2>
         </div>
         <figure class="rocket-animation d-flex align-items-center justify-content-center text-center w-100">
-          <img class="w-100 object-fit-contain" src="./assets/gifs/rocket_animation.gif" alt="rocker">
+          <img class="w-100 object-fit-contain" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/gifs/rocket_animation.gif" alt="rocker">
         </figure>
         <div>
           <p class="scroll-down-text text-center text-white text-uppercase mb-4">
             Scroll down
           </p>
           <figure class="scroll-down-button">
-            <img class="w-100" src="./assets/icons/arrow-bottom-scrolldown.svg" alt="down">
+            <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/arrow-bottom-scrolldown.svg" alt="down">
           </figure>
         </div>
       </div>
@@ -239,7 +30,7 @@
           </p>
         </div>
         <figure class="information-rocket m-0">
-          <img class="w-100" src="./assets/images/rocket.svg" alt="">
+          <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/rocket.svg" alt="">
         </figure>
       </div>
     </section>
@@ -288,7 +79,7 @@
         </div>
         <div class="text-center text-white">
           <figure class="m-0">
-            <img src="./assets/icons/rocket-icon.svg" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/rocket-icon.svg" alt="">
           </figure>
           <p class="text-box">
             Em um cenário de alta demanda por profissionais com <span class="color-light-blue">habilidades técnicas</span> em desenvolvimento de software e escassez de talentos, impulsionamos organizações de diferentes tamanhos com profissionais qualificados para desenvolvimento de <span class="color-light-blue">front end e back end</span> para atuarem no mercado e vencerem desafios.</p>
@@ -309,7 +100,7 @@
           <ul class="professional-list list-unstyled text-white text-center">
             <li class="professional-list-item bg-blur">
               <figure class="profile-image">
-                <img class="w-100" src="./assets/images/pamela.png" alt="">
+                <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/pamela.png" alt="">
               </figure>
               <div class="d-flex flex-column h-100">
                 <h3 class="mt-4 mb-3">Pamela Andrelo</h3>
@@ -321,7 +112,7 @@
             </li>
             <li class="professional-list-item bg-blur">
               <figure class="profile-image">
-                <img class="w-100" src="./assets/images/flavio.png" alt="">
+                <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/flavio.png" alt="">
               </figure>
               <h3 class="fs-title-lg mt-4 mb-3">Flavio Bergamini</h3>
               <p class="">
@@ -416,14 +207,14 @@
               <ul class="process-secondary-list list-unstyled">
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-registrations.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-registrations.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Inscrições</h3>
                   <p class="process-secondary-text">As inscrições serão feitas através do site da toodoo.</p>
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-participate.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-participate.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Quem pode participar?</h3>
                   <p class="process-secondary-text">
@@ -432,7 +223,7 @@
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-exam.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-exam.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Prova técnica</h3>
                   <p class="process-secondary-text">
@@ -445,14 +236,14 @@
               <ul class="process-secondary-list list-unstyled">
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-registrations.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-registrations.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Inscrições</h3>
                   <p class="process-secondary-text">As inscrições serão feitas através do site da toodoo.</p>
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-participate.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-participate.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Quem pode participar?</h3>
                   <p class="process-secondary-text">
@@ -461,7 +252,7 @@
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-exam.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-exam.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Prova técnica</h3>
                   <p class="process-secondary-text">
@@ -474,14 +265,14 @@
               <ul class="process-secondary-list list-unstyled">
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-registrations.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-registrations.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Inscrições</h3>
                   <p class="process-secondary-text">As inscrições serão feitas através do site da toodoo.</p>
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-participate.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-participate.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Quem pode participar?</h3>
                   <p class="process-secondary-text">
@@ -490,7 +281,7 @@
                 </li>
                 <li class="process-secondary-item">
                   <figure class="process-secondary-image">
-                    <img class="w-100" src="./assets/icons/process-exam.svg" alt="">
+                    <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/process-exam.svg" alt="">
                   </figure>
                   <h3 class="process-secondary-title">Prova técnica</h3>
                   <p class="process-secondary-text">
@@ -533,7 +324,7 @@
               <div class="student-balloon-detail"></div>
             </div>
             <figure class="student-image">
-              <img class="w-100" src="./assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/stundent-example.png" alt="">
             </figure>
           </div>
         </div>
@@ -542,22 +333,22 @@
         <ul class="students-list list-unstyled">
           <li class="students-list-item">
             <figure>
-              <img class="w-100" src="./assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/stundent-example.png" alt="">
             </figure>
           </li>
           <li class="students-list-item">
             <figure>
-              <img class="w-100" src="./assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/stundent-example.png" alt="">
             </figure>
           </li>
           <li class="students-list-item">
             <figure>
-              <img class="w-100" src="./assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/stundent-example.png" alt="">
             </figure>
           </li>
           <li class="students-list-item">
             <figure>
-              <img class="w-100" src="./assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri();?>/public/assets/images/stundent-example.png" alt="">
             </figure>
           </li>
         </ul>
@@ -636,7 +427,7 @@
         </ul>
         <div class="text-center text-white fs-title-lg">
           <figure class="m-0">
-            <img src="./assets/icons/rocket-icon.svg" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri();?>/public/assets/icons/rocket-icon.svg" alt="">
           </figure>
           <p class="my-4 mb-sm-5">
             Ainda possui dúvidas? Entre <br> em contato com a gente!
@@ -656,70 +447,4 @@
       </div>
     </section>
   </main>
-  <footer class="text-center text-lg-start text-white bg-blue">
-    <section class="top-footer">
-      <div class="container p-4 pb-0">
-        <img class="my-4" src="./assets/images/toodoo-white-logo.png" width="150" height="30" alt="Toodoo Brand Logo" />
-        <div class="row">
-          <div class="col-md-3 col-lg-3 col-xl-3 mt-3">
-            <ul class="list-unstyled card-columns p-0" data-columns="2">
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Cases</a></li>
-              <li><a href="#">Blastoff</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <p>Rua Guaipa, 51 Conj. 208/209 Vila Leopoldina - SP</p>
-            <p>+55 11 3624-6101</p>
-          </div>
-
-          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
-            <div class="d-flex flex-column align-items-center text-center">
-              <p>NOSSAS REDES SOCIAIS</p>
-              <ul class="d-flex gap-4 align-items-center list-unstyled py-2">
-                <li>
-                  <a href="#"><img src="./assets/icons/facebook.svg" alt="facebook" width="12" height="24" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="./assets/icons/instagram.svg" alt="instagram" width="25" height="24" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="./assets/icons/behance.svg" alt="behance" width="34" height="22" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="./assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
-                </li>
-              </ul>
-
-              <a class="toodoo-button">VEM PRA TOODOO</a>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <a href="#">
-              <img src="./assets/icons/go-up-icon.svg" alt="Arrow up" />
-              VOLTAR PARA O TOPO</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bottom-footer py-3 pt-0">
-      <div class="container p-4 pb-0">
-        <div class="row d-flex align-items-center">
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <p>Toodoo Copyright (c) 2022. Todos os direitos Reservados.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </div>
-</body>
-
-</html>
+<? get_footer();?>

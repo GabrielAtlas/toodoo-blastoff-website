@@ -80,7 +80,7 @@
               margin-top: 125px;
               &:not(:first-child) {
                 &::before {
-                  content: url(../assets/images/about-lineway.svg);
+                  content: url(./public/assets/images/about-lineway.svg);
                   position: absolute;
                   right: calc(50% - 8px);
                   top: calc(-100% - 25px);
@@ -91,7 +91,7 @@
             &:nth-child(even) {
               &::before {
                 bottom: calc(-100% - 25px);
-                content: url(../assets/images/about-lineway.svg);
+                content: url(./public/assets/images/about-lineway.svg);
                 position: absolute;
                 right: calc(50% - 8px);
               }
@@ -100,7 +100,7 @@
           @include mediaMax(1199px) {
             &:not(:first-child) {
               &::before {
-                content: url(../assets/icons/process-line-dashed-mobile.svg);
+                content: url(./public/assets/icons/process-line-dashed-mobile.svg);
                 left: 50%;
                 position: absolute;
                 top: 0;
@@ -330,7 +330,7 @@
           &:nth-child(1n + 2) {
             & .process-secondary-item:first-child {
               &::before {
-                content: url("../assets/icons/process-item-line-dashed-top.svg");
+                content: url("./public/assets/icons/process-item-line-dashed-top.svg");
                 left: 50%;
                 position: absolute;
                 transform: translate(-50%, calc(-100% - 24px));
@@ -344,7 +344,7 @@
               & .process-secondary-item {
                 &:nth-child(1n + 2) {
                   &::before {
-                    content: url("../assets/icons/process-item-line-dashed.svg");
+                    content: url("./public/assets/icons/process-item-line-dashed.svg");
                     display: block;
                     left: 0;
                     position: absolute;
@@ -366,7 +366,7 @@
               text-align: center;
               &:not(:nth-child(3n - 2)) {
                 &::before {
-                  content: url("../assets/icons/process-item-line-dashed.svg");
+                  content: url("./public/assets/icons/process-item-line-dashed.svg");
                   display: block;
                   position: absolute;
                   right: 0;
