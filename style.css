@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/*
+Theme Name: Blastoff
+Author: Jogão Gabriel, Lucas Carlos
+Author URI: 
+Description: Tema desenvolvido para o site Blastoff, iniciativa Toodoo.
+Version: 1.0
+License: MIT.
+*/
 /*
 This file is used to contain all vendor imports.
 */
@@ -150,7 +159,7 @@ This file is used to contain all base imports.
 Files inside this folder can contain global styles used in the project.
 */
 .form-check-input:checked {
-  background-image: url("../assets/icons/check-icon.svg") !important;
+  background-image: url("./public/assets/icons/check-icon.svg") !important;
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -165,6 +174,15 @@ input[type=radio]:focus {
 .form-check-input:checked {
   background: none;
   border-color: #ea005a;
+}
+
+.owl-carousel .owl-item img {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.wpcf7-list-item {
+  margin: 0 !important;
 }
 
 body,
@@ -197,12 +215,13 @@ Files inside this folder should contain all styles relating to a reusable compon
   color: #ea005a;
 }
 
-label {
+.toodoo-form .input-wrapper {
   position: relative;
 }
-label span {
+.toodoo-form .input-wrapper .label-title {
   display: block;
   padding: 0 4px;
+  position: relative;
   background: white;
   transform: translateY(50%);
   width: fit-content;
@@ -212,22 +231,23 @@ label span {
   line-height: 17px;
   letter-spacing: 0.005em;
   text-transform: uppercase;
+  z-index: 20;
   color: #ea005a;
 }
-label input,
-label textarea {
+.toodoo-form .input-wrapper input,
+.toodoo-form .input-wrapper textarea {
   width: 100%;
   border: 2px solid #ea005a;
   border-radius: 39px;
   padding-left: 10px;
   height: 38px;
 }
-label input:focus,
-label textarea:focus {
+.toodoo-form .input-wrapper input:focus,
+.toodoo-form .input-wrapper textarea:focus {
   border: 2px solid #ea005a;
   outline: none;
 }
-label textarea {
+.toodoo-form .input-wrapper textarea {
   height: 116px !important;
   padding-left: 15px;
   resize: none;
@@ -771,7 +791,7 @@ footer ul {
   top: -10%;
   border-radius: 15px;
   z-index: 2;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.4), rgba(9, 13, 104, 0.4)), url("../assets/gifs/empresas-2.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.4), rgba(9, 13, 104, 0.4)), url("./public/assets/gifs/empresas-2.gif");
   background-size: 177px 110px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -782,7 +802,7 @@ footer ul {
   position: absolute;
   width: 292px;
   height: 180px;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.6), rgba(9, 13, 104, 0.6)), url("../assets/gifs/empresas-3.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.6), rgba(9, 13, 104, 0.6)), url("./public/assets/gifs/empresas-3.gif");
   background-size: 292px 180px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -803,7 +823,7 @@ footer ul {
   position: absolute;
   width: 187px;
   height: 113px;
-  background: linear-gradient(0deg, rgba(9, 13, 104, 0.8), rgba(9, 13, 104, 0.8)), url("../assets/gifs/empresas-4.gif");
+  background: linear-gradient(0deg, rgba(9, 13, 104, 0.8), rgba(9, 13, 104, 0.8)), url("./public/assets/gifs/empresas-4.gif");
   background-size: 187px 113px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -858,12 +878,6 @@ footer ul {
   color: #00eabd;
 }
 
-.feedback-content {
-  display: flex;
-  gap: 41px;
-  justify-content: center;
-}
-
 .feedback-box {
   border: 2px solid #090d68;
   border-radius: 20px;
@@ -908,7 +922,7 @@ footer ul {
 
 #form-section {
   position: relative;
-  background: url("../assets/images/bg-cam-people.png");
+  background: url("./public/assets/images/bg-cam-people.png");
 }
 #form-section::before {
   content: "";
@@ -1056,7 +1070,7 @@ footer ul {
     margin-top: 125px;
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd):not(:first-child)::before {
-    content: url(../assets/images/about-lineway.svg);
+    content: url(./public/assets/images/about-lineway.svg);
     position: absolute;
     right: calc(50% - 8px);
     top: calc(-100% - 25px);
@@ -1064,14 +1078,14 @@ footer ul {
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(even)::before {
     bottom: calc(-100% - 25px);
-    content: url(../assets/images/about-lineway.svg);
+    content: url(./public/assets/images/about-lineway.svg);
     position: absolute;
     right: calc(50% - 8px);
   }
 }
 @media screen and (max-width: 1199px) {
   .page-blastoff .main .section-about .about-list .about-list-item:not(:first-child)::before {
-    content: url(../assets/icons/process-line-dashed-mobile.svg);
+    content: url(./public/assets/icons/process-line-dashed-mobile.svg);
     left: 50%;
     position: absolute;
     top: 0;
@@ -1308,7 +1322,7 @@ footer ul {
   row-gap: 160px;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(1n+2) .process-secondary-item:first-child::before {
-  content: url("../assets/icons/process-item-line-dashed-top.svg");
+  content: url("./public/assets/icons/process-item-line-dashed-top.svg");
   left: 50%;
   position: absolute;
   transform: translate(-50%, calc(-100% - 24px));
@@ -1318,7 +1332,7 @@ footer ul {
   flex-direction: row-reverse;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(2n+2) .process-secondary-list .process-secondary-item:nth-child(1n+2)::before {
-  content: url("../assets/icons/process-item-line-dashed.svg");
+  content: url("./public/assets/icons/process-item-line-dashed.svg");
   display: block;
   left: 0;
   position: absolute;
@@ -1337,7 +1351,7 @@ footer ul {
   text-align: center;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item:not(:nth-child(3n-2))::before {
-  content: url("../assets/icons/process-item-line-dashed.svg");
+  content: url("./public/assets/icons/process-item-line-dashed.svg");
   display: block;
   position: absolute;
   right: 0;

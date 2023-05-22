@@ -72,7 +72,7 @@ $third-color: map-get($map-colors, "blue");
       rgba(9, 13, 104, 0.4),
       rgba(9, 13, 104, 0.4)
     ),
-    url("../assets/gifs/empresas-2.gif");
+    url("./public/assets/gifs/empresas-2.gif");
   background-size: 177px 110px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -88,7 +88,7 @@ $third-color: map-get($map-colors, "blue");
       rgba(9, 13, 104, 0.6),
       rgba(9, 13, 104, 0.6)
     ),
-    url("../assets/gifs/empresas-3.gif");
+    url("./public/assets/gifs/empresas-3.gif");
   background-size: 292px 180px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -113,7 +113,7 @@ $third-color: map-get($map-colors, "blue");
       rgba(9, 13, 104, 0.8),
       rgba(9, 13, 104, 0.8)
     ),
-    url("../assets/gifs/empresas-4.gif");
+    url("./public/assets/gifs/empresas-4.gif");
   background-size: 187px 113px; /* <------ */
   background-repeat: no-repeat;
   background-position: center;
@@ -173,12 +173,6 @@ $third-color: map-get($map-colors, "blue");
   }
 }
 
-.feedback-content {
-  display: flex;
-  gap: 41px;
-  justify-content: center;
-}
-
 .feedback-box {
   border: 2px solid #090d68;
   border-radius: 20px;
@@ -228,7 +222,7 @@ $third-color: map-get($map-colors, "blue");
 
 #form-section {
   position: relative;
-  background: url("../assets/images/bg-cam-people.png");
+  background: url("./public/assets/images/bg-cam-people.png");
 
   &::before {
     content: "";

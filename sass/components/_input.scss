@@ -1,39 +1,43 @@
-label {
-  position: relative;
+.toodoo-form {
+  .input-wrapper {
+    position: relative;
 
-  span {
-    display: block;
-    padding: 0 4px;
-    background: white;
-    transform: translateY(50%);
-    width: fit-content;
-    margin-left: 15px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 17px;
-    letter-spacing: 0.005em;
-    text-transform: uppercase;
+    .label-title {
+      display: block;
+      padding: 0 4px;
+      position: relative;
+      background: white;
+      transform: translateY(50%);
+      width: fit-content;
+      margin-left: 15px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: 0.005em;
+      text-transform: uppercase;
+      z-index: 20;
 
-    color: #ea005a;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    border: 2px solid #ea005a;
-    border-radius: 39px;
-    padding-left: 10px;
-    height: 38px;
-
-    &:focus {
-      border: 2px solid #ea005a;
-      outline: none;
+      color: #ea005a;
     }
-  }
 
-  textarea {
-    height: 116px !important;
-    padding-left: 15px;
-    resize: none;
+    input,
+    textarea {
+      width: 100%;
+      border: 2px solid #ea005a;
+      border-radius: 39px;
+      padding-left: 10px;
+      height: 38px;
+
+      &:focus {
+        border: 2px solid #ea005a;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 116px !important;
+      padding-left: 15px;
+      resize: none;
+    }
   }
 }
