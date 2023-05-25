@@ -212,6 +212,10 @@ $third-color: map-get($map-colors, "blue");
   }
 }
 
+.methodology-image {
+  max-height: 368px;
+}
+
 .methodology-heading,
 .our-job-heading,
 .feedback-heading {

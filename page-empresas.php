@@ -77,7 +77,6 @@
                     }
                 }
               ?>
-            
           </div>
         </div>
       </div>
@@ -108,28 +107,53 @@
           metodologias ágeis e se desenvolverão numa linguagem e/ou
           framework específico.
         </p>
-        <div class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5" id="methodology-buttons"></div>
+        <div class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5" id="methodology-buttons">
+          
+          <?php
+                $methodologies = get_field('methodologies');
+
+                if ($methodologies) {
+                    foreach ($methodologies as $index => $methodology) {
+                        $title = $methodology['methodology_title'];
+
+                        $active = ($index === 0) ? '' : 'ghost';
+
+                        echo '<button id="methodology-button-' . $index . '" class="toodoo-button ' . $active . '">' . $title . '</button>';
+                    }
+                }
+              ?>
+        </div>
       </div>
       <div class="methodology-content mt-5">
         <div class="row">
-          <div class="col-md-6">
-            <div class="d-flex align-items-start gap-3">
-              <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br />
-                <br />
-                Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat.
-              </p>
-            </div>
+          <div id="methodologies" class="col-md-6">
+            <?php
+                if ($methodologies) {
+                    foreach ($methodologies as $index => $methodology) {
+                        $description = $methodology['methodology_description'];
+
+                        $visible = ($index === 0) ? '' : 'd-none';
+
+                        echo '<div id="methodology-'. $index . '" class="d-flex align-items-start gap-3 '. $visible .'">
+                                <img class="img-fluid" src="'. get_stylesheet_directory_uri() . '/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
+                                <p>' . $description . '</p>
+                              </div>';
+                    }
+                }
+              ?>
           </div>
-          <div class="col-md-6">
-            <img class="rounded img-fluid" width="568" height="368" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/methodology-1.png" alt="Imagem ilustrativa" />
+          <div id="methodologies-images" class="col-md-6">
+            <?php
+                if ($methodologies) {
+                    foreach ($methodologies as $index => $methodology) {
+                        $image = $methodology['methodology_image'];
+
+                        $visible = ($index === 0) ? '' : 'd-none';
+
+                        echo '<img id="methodology-image-' . $index . '" class="methodology-image rounded img-fluid ' . $visible . '" width="568" height="368" src="' . $image . '" alt="Imagem ilustrativa" />';
+                    }
+                }
+              ?>
           </div>
         </div>
       </div>

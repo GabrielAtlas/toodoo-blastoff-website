@@ -912,6 +912,10 @@ footer ul {
   margin-bottom: 2px;
 }
 
+.methodology-image {
+  max-height: 368px;
+}
+
 .methodology-heading h1,
 .our-job-heading h1,
 .feedback-heading h1 {
