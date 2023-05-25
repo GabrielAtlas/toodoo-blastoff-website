@@ -1,73 +1,27 @@
-const methodologiesButtons = document.getElementById("methodology-buttons");
+var cards = document.getElementsByClassName("step-card");
 
-const methodologies = [
-  {
-    buttonText: "PROGRAMAÇÃO",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    <br />
-    <br />
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat.`,
-    image: "./assets/images/methodology-1.png",
-    active: true,
-  },
-  {
-    buttonText: "METODOLOGIAS ÁGEIS",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    <br />
-    <br />
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat.`,
-    image: "./assets/images/methodology-1.png",
-    active: false,
-  },
-  {
-    buttonText: "RESIDÊNCIA DE SOFTWARE",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    <br />
-    <br />
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat.`,
-    image: "./assets/images/methodology-1.png",
-    active: false,
-  },
-  {
-    buttonText: "SOFT SKILLS",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    <br />
-    <br />
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat.`,
-    image: "./assets/images/methodology-1.png",
-    active: false,
-  },
-];
+for (var i = 0; i < cards.length; i++) {
+  const cardClickedId = `step-image-${i}`;
+  cards[i].addEventListener("click", function () {
+    for (var j = 0; j < cards.length; j++) {
+      if (cards[j] == this) {
+        cards[j].classList.add("active");
+      } else {
+        cards[j].classList.remove("active");
+      }
+    }
+    $("#step-images")
+      .children()
+      .each(function () {
+        var childId = $(this).attr("id");
+        console.log(childId + " - " + cardClickedId);
 
-const buttons = methodologies.map((data) => {
-  const button = document.createElement("button");
-  button.innerHTML = data.buttonText;
-  button.classList.add("toodoo-button");
-  if (!data.active) button.classList.add("ghost");
-  return button;
-});
-
-buttons.forEach((button) => {
-  methodologiesButtons.appendChild(button);
-  button.addEventListener("click", () => {});
-});
+        if (!$(this).hasClass("d-none")) {
+          $(this).addClass("d-none");
+        }
+        if (childId === cardClickedId) {
+          $(this).removeClass("d-none");
+        }
+      });
+  });
+}

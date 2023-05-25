@@ -53,9 +53,12 @@ $third-color: map-get($map-colors, "blue");
     font-size: 20px;
   }
 
-  button {
+  a {
+    display: block;
+    width: fit-content;
     border-color: white !important;
     color: white !important;
+    text-decoration: none !important;
   }
 }
 
@@ -170,6 +173,10 @@ $third-color: map-get($map-colors, "blue");
     strong {
       color: $secondary-color;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
