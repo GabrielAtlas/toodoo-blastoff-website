@@ -1,31 +1,20 @@
-const apprenticeshipButtons = document.querySelectorAll(
-  ".apprenticeship-list > .apprenticeship-button",
-);
-const destinyScrollDown = document.querySelector(
-  ".section-information",
-).offsetTop;
-const scrollDownButton = document.querySelector(
-  ".page-blastoff .scroll-down-button",
-);
-const headerDesktopHeight = document.querySelector(
-  ".header > .header-desktop",
-).offsetHeight;
-const headerMobileHeight = document.querySelector(
-  ".header > .header-mobile",
-).offsetHeight;
+const apprenticeshipButtons = document.querySelectorAll(".apprenticeship-list > .apprenticeship-button");
+const apprenticeshipCards = document.querySelectorAll(".apprenticeship-list .apprenticeship-list-item");
+const destinyScrollDown = document.querySelector(".section-information").offsetTop;
+const scrollDownButton = document.querySelector(".page-blastoff .scroll-down-button");
+const headerDesktopHeight = document.querySelector(".header > .header-desktop").offsetHeight;
+const headerMobileHeight = document.querySelector(".header > .header-mobile").offsetHeight;
 
-const depositionsCards = document.querySelectorAll(
-  ".students-list .students-list-item",
-);
+const depositionsCards = document.querySelectorAll(".students-list .students-list-item");
 
 function updateApprenticeshipCarousel(currentItem, nextItem) {
   const valueCurrentItem = currentItem.getAttribute("data-list-item");
   const valueNextItem = () => {
-    if (+valueCurrentItem + nextItem > 3) {
+    if (+valueCurrentItem + nextItem >= apprenticeshipCards.length) {
       return 0;
     }
     if (+valueCurrentItem + nextItem < 0) {
-      return 3;
+      return (+apprenticeshipCards.length - 1);
     }
     return +valueCurrentItem + nextItem;
   };
