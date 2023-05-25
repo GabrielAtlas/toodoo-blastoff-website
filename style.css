@@ -1393,7 +1393,7 @@ footer ul {
     content: none !important;
   }
   .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-item::after {
-    content: url("../../public/assets/icons/process-line-dashed-mobile.svg");
+    content: url("./public/assets/icons/process-line-dashed-mobile.svg");
     display: block;
     left: 50%;
     position: absolute;

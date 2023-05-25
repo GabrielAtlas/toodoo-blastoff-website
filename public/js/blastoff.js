@@ -14,6 +14,10 @@ const headerMobileHeight = document.querySelector(
   ".header > .header-mobile",
 ).offsetHeight;
 
+const depositionsCards = document.querySelectorAll(
+  ".students-list .students-list-item",
+);
+
 function updateApprenticeshipCarousel(currentItem, nextItem) {
   const valueCurrentItem = currentItem.getAttribute("data-list-item");
   const valueNextItem = () => {
@@ -59,4 +63,32 @@ scrollDownButton.addEventListener("click", () => {
     console.log("mobile");
     window.scroll(0, destinyScrollDown);
   }
+});
+
+depositionsCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const cardIndex = card.getAttribute("data-list-item");
+    const currentActive = document.querySelector(
+      ".students-tip-list > .students-tip-item.active",
+    );
+    const nextActive = document.querySelector(
+      `.students-tip-list > .students-tip-item[data-list-item="${cardIndex}"]`,
+    );
+    currentActive.classList.remove("active");
+    nextActive.classList.add("active");
+
+    const data = card.querySelector(".depositions-container");
+    const studentInfo = {
+      profileImage: data.querySelector(".the-image").textContent,
+      name: data.querySelector(".the-name").textContent,
+      deposition: data.querySelector(".the-depositions").textContent,
+    };
+
+    const positionDisplay = document.querySelector(
+      ".section-depositions .students-depositions",
+    );
+    positionDisplay.querySelector(".student-information-container h3").textContent = studentInfo.name;
+    positionDisplay.querySelector(".student-information-container .student-text").textContent = studentInfo.deposition;
+    positionDisplay.querySelector(".student-image img").setAttribute("src", studentInfo.profileImage);
+  });
 });
