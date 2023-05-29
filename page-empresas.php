@@ -7,15 +7,12 @@
     <div class="container d-flex justify-content-between pt-5">
       <div class="brading-info">
         <h1>
-          lidere o mercado com os
-          <strong class="color-magenta">melhores</strong> dev’s
+          <?php echo the_field('branding_heading'); ?>
         </h1>
         <p>
-          Contratamos, treinamos e desenvolvemos profissionais que hoje,
-          atuam como desenvolvedores em grandes clientes.
-          <strong>Não fique de fora!</strong>
+          <?php echo the_field('branding_description') ?>
         </p>
-        <button class="toodoo-button ghost mb-5">SAIBA MAIS</button>
+        <a href="<?php echo the_field('branding_button'); ?>" class="toodoo-button ghost mb-5">SAIBA MAIS</a>
         <div class="i-cant-hear-you"></div>
         <div class="people-gif"></div>
       </div>
@@ -36,51 +33,50 @@
         <div class="row">
           <div class="col-md-6 order-1 order-md-2">
             <div class="d-flex flex-column">
-              <div class="step-card active">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/light-icon.svg" />
-                <div class="step-card-description">
-                  <h6>Desafios</h6>
-                  <p>
-                    O Blastoff aborda todos os desafios de treinamento e
-                    desenvolvimento de maneira personalizada e escalável.
-                  </p>
-                </div>
-              </div>
-              <div class="step-card">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/hood-icon.svg" />
-                <div class="step-card-description">
-                  <h6>Ensino</h6>
-                  <p>
-                    O programa é projetado para preencher o gap que existe
-                    entre o ensino tradicional e o mercado de trabalho.
-                  </p>
-                </div>
-              </div>
-              <div class="step-card">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/star-icon.svg" />
-                <div class="step-card-description">
-                  <h6>Habilidades</h6>
-                  <p>
-                    Nós Desenvolvemos as competências e habilidades dos
-                    colaboradores criando um ambiente saudável, produtivo,
-                    motivado e competitivo.
-                  </p>
-                </div>
-              </div>
-              <div class="step-card">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/target-icon.svg" />
-                <div class="step-card-description">
-                  <h6>Objetivos</h6>
-                  <p>
-                    Colaboramos para encontrar e reter talentos para atingir
-                    os objetivos estratégicos da organização.
-                  </p>
-                </div>
-              </div>
+              <?php
+              // Get the repeater field values
+              $stepCards = get_field('step_cards');
+
+              // Check if there are values
+              if ($stepCards) {
+                foreach ($stepCards as $index => $card) {
+                  $title = $card['step_card_title'];
+                  $description = $card['step_card_description'];
+                  $icon = $card['step_card_icon'];
+
+                  // Determine if it's the first iteration
+                  $class = ($index === 0) ? 'active' : '';
+
+                  // Display the values
+                  echo '<div id="step-' . $index . '" class="step-card ' . $class . '">
+                                <img src="' . get_stylesheet_directory_uri() . '/public/assets/icons/' . $icon . '" />
+                                <div class="step-card-description">
+                                  <h6>' . $title . '</h6>
+                                  <p>
+                                  ' . $description . '
+                                  </p>
+                                </div>
+                              </div>';
+                }
+              }
+              ?>
             </div>
           </div>
-          <div class="col-md-6 order-md-4 mb-4">
-            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/desafios-grid-2x.png" width="550" height="651" alt="Foto de pessoas felizes" />
+          <div id="step-images" class="col-md-6 order-md-4 mb-4">
+            <?php
+            // Check if there are values
+            if ($stepCards) {
+              foreach ($stepCards as $index => $card) {
+                $image = $card['step_card_image'];
+
+                // Determine if it's the first iteration
+                $visible = ($index === 0) ? '' : 'd-none';
+
+                // Display the values
+                echo '<img id="step-image-' . $index . '" class="img-fluid ' . $visible . '" src="' . $image . '" width="550" height="651" alt="Foto de pessoas felizes" />';
+              }
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -91,16 +87,13 @@
     <div class="rocket-section container p-5">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/rocket-icon.svg" class="my-4" alt="Rocket icon" />
       <p>
-        Em um cenário de alta demanda por profissionais com
-        <strong>habilidades técnicas</strong> em desenvolvimento de software
-        e escassez de talentos, impulsionamos organizações de diferentes
-        tamanhos com profissionais qualificados para desenvolvimento de
-        <strong>front end e back end</strong> para atuarem no mercado e
-        vencerem desafios.
+        <?php echo the_field('rocket_description'); ?>
       </p>
-      <button class="toodoo-button my-4">
-        QUERO IMPULSIONAR MEU NEGÓCIO
-      </button>
+      <div class="my-4">
+        <a href="<?php echo the_field('rocket_button_link'); ?>" class="toodoo-button">
+          QUERO IMPULSIONAR MEU NEGÓCIO
+        </a>
+      </div>
     </div>
   </section>
 
@@ -114,28 +107,53 @@
           metodologias ágeis e se desenvolverão numa linguagem e/ou
           framework específico.
         </p>
-        <div class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5" id="methodology-buttons"></div>
+        <div class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5" id="methodology-buttons">
+
+          <?php
+          $methodologies = get_field('methodologies');
+
+          if ($methodologies) {
+            foreach ($methodologies as $index => $methodology) {
+              $title = $methodology['methodology_title'];
+
+              $active = ($index === 0) ? '' : 'ghost';
+
+              echo '<button id="methodology-button-' . $index . '" class="toodoo-button ' . $active . '">' . $title . '</button>';
+            }
+          }
+          ?>
+        </div>
       </div>
       <div class="methodology-content mt-5">
         <div class="row">
-          <div class="col-md-6">
-            <div class="d-flex align-items-start gap-3">
-              <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br />
-                <br />
-                Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat.
-              </p>
-            </div>
+          <div id="methodologies" class="col-md-6">
+            <?php
+            if ($methodologies) {
+              foreach ($methodologies as $index => $methodology) {
+                $description = $methodology['methodology_description'];
+
+                $visible = ($index === 0) ? '' : 'd-none';
+
+                echo '<div id="methodology-' . $index . '" class="d-flex align-items-start gap-3 ' . $visible . '">
+                                <img class="img-fluid" src="' . get_stylesheet_directory_uri() . '/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
+                                <p>' . $description . '</p>
+                              </div>';
+              }
+            }
+            ?>
           </div>
-          <div class="col-md-6">
-            <img class="rounded img-fluid" width="568" height="368" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/methodology-1.png" alt="Imagem ilustrativa" />
+          <div id="methodologies-images" class="col-md-6">
+            <?php
+            if ($methodologies) {
+              foreach ($methodologies as $index => $methodology) {
+                $image = $methodology['methodology_image'];
+
+                $visible = ($index === 0) ? '' : 'd-none';
+
+                echo '<img id="methodology-image-' . $index . '" class="methodology-image rounded img-fluid ' . $visible . '" width="568" height="368" src="' . $image . '" alt="Imagem ilustrativa" />';
+              }
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -176,37 +194,19 @@
 
   <section id="solution-section">
     <div class="solution-section-container container pt-5">
-      <div class="row pt-5">
+      <div class="row pt-3">
         <div class="solution-section-texts col-md-6 mb-5">
           <h1>
-            estamos prontos para criar uma <strong>solução</strong> para o
-            seu problema
+            <?php echo the_field('vamos_conversar_titulo'); ?>
           </h1>
-          <button class="toodoo-button mt-3 mb-5">VAMOS CONVERSAR?</button>
+          <a href="<?php echo the_field('vamos_conversar_link_botao_redirect'); ?>" class="toodoo-button mt-3 mb-5"><?php echo the_field('vamos_conversar_titulo_botao'); ?></a>
         </div>
-        <div class="col-md-6 text-end d-none d-md-block">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-avatar.png" alt="Mascote Toodoo" />
+        <div class="col-md-8 text-end d-none d-md-block">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-avatar.svg" alt="Mascote Toodoo" />
         </div>
       </div>
     </div>
   </section>
 </main>
-<script defer src="./js/empresas.js"></script>
-<!--
-  <script>
-      var cards = document.getElementsByClassName("step-card");
-
-      for (var i = 0; i < cards.length; i++) {
-        cards[i].addEventListener("click", function () {
-          for (var j = 0; j < cards.length; j++) {
-            if (cards[j] == this) {
-              cards[j].classList.add("active");
-            } else {
-              cards[j].classList.remove("active");
-            }
-          }
-        });
-      }
-    </script>
--->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/empresas.js"></script>
 <?php get_footer(); ?>

@@ -53,9 +53,12 @@ $third-color: map-get($map-colors, "blue");
     font-size: 20px;
   }
 
-  button {
+  a {
+    display: block;
+    width: fit-content;
     border-color: white !important;
     color: white !important;
+    text-decoration: none !important;
   }
 }
 
@@ -171,6 +174,10 @@ $third-color: map-get($map-colors, "blue");
       color: $secondary-color;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .feedback-box {
@@ -203,6 +210,10 @@ $third-color: map-get($map-colors, "blue");
       margin-bottom: 2px;
     }
   }
+}
+
+.methodology-image {
+  max-height: 368px;
 }
 
 .methodology-heading,
@@ -263,6 +274,11 @@ $third-color: map-get($map-colors, "blue");
 }
 
 #solution-section {
+  a {
+    display: block;
+    width: fit-content;
+    text-decoration: none !important;
+  }
 }
 
 .solution-section-texts {

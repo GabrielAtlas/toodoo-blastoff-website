@@ -778,9 +778,12 @@ footer ul {
   color: white;
   font-size: 20px;
 }
-.brading-info button {
+.brading-info a {
+  display: block;
+  width: fit-content;
   border-color: white !important;
   color: white !important;
+  text-decoration: none !important;
 }
 
 .sorry-go-ahead {
@@ -877,6 +880,9 @@ footer ul {
 .rocket-section p strong {
   color: #00eabd;
 }
+.rocket-section a {
+  text-decoration: none;
+}
 
 .feedback-box {
   border: 2px solid #090d68;
@@ -904,6 +910,10 @@ footer ul {
 .feedback-box .feedback-description span {
   font-weight: bold;
   margin-bottom: 2px;
+}
+
+.methodology-image {
+  max-height: 368px;
 }
 
 .methodology-heading h1,
@@ -953,6 +963,12 @@ footer ul {
 
 .form-section-container * {
   z-index: 1;
+}
+
+#solution-section a {
+  display: block;
+  width: fit-content;
+  text-decoration: none !important;
 }
 
 .solution-section-texts {
