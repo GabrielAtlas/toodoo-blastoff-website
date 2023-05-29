@@ -624,7 +624,8 @@
       }
       & .list-container {
         position: relative;
-        transform: translateY(-75%);
+        top: -157px;
+        margin-bottom: 93px;
         & .students-list {
           column-gap: 20px;
           display: flex;

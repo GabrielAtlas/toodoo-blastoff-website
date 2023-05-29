@@ -1600,7 +1600,8 @@ footer ul {
 }
 .page-blastoff .main .section-depositions .list-container {
   position: relative;
-  transform: translateY(-75%);
+  top: -157px;
+  margin-bottom: 93px;
 }
 .page-blastoff .main .section-depositions .list-container .students-list {
   column-gap: 20px;

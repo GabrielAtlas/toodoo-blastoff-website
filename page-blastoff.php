@@ -7,11 +7,15 @@
     <section class="section-project light-orbs">
       <div class="container">
         <div class="text-center">
-          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">O programa</p>
-          <h2 class="fs-display-md text-white text-uppercase fw-medium m-0">BlastOff</h2>
+          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">
+            <?php the_field('section_title_1nth') ?>
+          </p>
+          <h2 class="fs-display-md text-white text-uppercase fw-medium m-0">
+            <?php the_field('section_subtitle_1nth') ?>
+          </h2>
         </div>
         <figure class="rocket-animation d-flex align-items-center justify-content-center text-center w-100">
-          <img class="w-100 object-fit-contain" src="<?php the_field('lottiefile') ?>" alt="<?php the_field('lottiefile_info'); ?>">
+          <img class="w-100 object-fit-contain" src="<?php echo esc_html(get_field('lottiefile')['url']) ?>" alt="<?php echo esc_html(get_field('lottiefile')['alt']) ?>">
         </figure>
         <div>
           <p class="scroll-down-text text-center text-white text-uppercase mb-4">
@@ -34,15 +38,15 @@
           </p>
         </div>
         <figure class="information-rocket m-0">
-          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/rocket.svg" alt="">
+          <img class="w-100" src="<?php echo esc_html(get_field('imagem_do_programa')['url']) ?>" alt="<?php echo esc_html(get_field('imagem_do_programa')['alt']) ?>">
         </figure>
       </div>
     </section>
     <section class="section-about light-orbs">
       <div class="container">
         <div class="text-center">
-          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">Sobre</p>
-          <h2 class="fs-display-md text-white fw-medium m-0">Como funciona?</h2>
+          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3"><?php the_field('section_title_2nth') ?></p>
+          <h2 class="fs-display-md text-white fw-medium m-0"><?php the_field('section_subtitle_2nth') ?></h2>
         </div>
         <div>
           <ul class="about-list text-white list-unstyled">
@@ -61,18 +65,19 @@
         </div>
         <div class="text-center text-white">
           <figure class="m-0">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/rocket-icon.svg" alt="">
+            <img src="<?php echo esc_html(get_field('icone_sobre')['url']) ?>" alt="<?php echo esc_html(get_field('icone_sobre')['alt']) ?>">
           </figure>
           <p class="text-box">
-            Em um cenário de alta demanda por profissionais com <span class="color-light-blue">habilidades técnicas</span> em desenvolvimento de software e escassez de talentos, impulsionamos organizações de diferentes tamanhos com profissionais qualificados para desenvolvimento de <span class="color-light-blue">front end e back end</span> para atuarem no mercado e vencerem desafios.</p>
+            <?php the_field('texto_sobre'); ?>
+          </p>
         </div>
       </div>
     </section>
     <section class="section-professionals-title">
       <div class="container">
         <div class="text-center">
-          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">Profissionais</p>
-          <h2 class="fs-display-md text-white fw-medium m-0">Conheça os instrutores responsáveis</h2>
+          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3"><?php the_field('section_title_3nth') ?></p>
+          <h2 class="fs-display-md text-white fw-medium m-0"><?php the_field('section_subtitle_3nth') ?></h2>
         </div>
       </div>
     </section>
@@ -105,12 +110,16 @@
       <div class="container light-orbs">
         <div class="text-white d-flex flex-sm-row justify-content-between align-items-sm-end mb-sm-5 flex-column align-items-center text-center text-sm-start">
           <div class="">
-            <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">Fundamentos e Soft skills</p>
-            <h2 class="fs-display-md text-white fw-medium m-0">O que você <br> pode aprender?</h2>
+            <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">
+              <?php the_field('section_title_4nth'); ?>
+            </p>
+            <h2 class="fs-display-md text-white fw-medium m-0">
+              <?php the_field('section_subtitle_4nth'); ?>
+            </h2>
           </div>
           <div class="fs-title-lg">
             <p class="apprenticeship-info text-sm-end mb-4 mt-2 m-sm-0">
-              O aluno pode aprender a <span class="color-light-blue fw-bold">programar</span>, aprendendo desde lógica de programação até uma linguagem e ou framework específico.
+              <?php the_field('texto_fundamentos'); ?>
             </p>
           </div>
         </div>
@@ -154,9 +163,11 @@
     <section class="section-process">
       <div class="container">
         <div class="text-center">
-          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">O processo seletivo</p>
+          <p class="fs-headline-lg color-magenta fw-bold mb-1 mb-md-3">
+            <?php the_field('section_title_5nth') ?>
+          </p>
           <p class="fs-title-lg text-white">
-            Entenda como funciona nosso <br> processo seletivo
+            <?php the_field('section_subtitle_5nth') ?>
           </p>
         </div>
         <div>
@@ -194,12 +205,12 @@
         <div class="text-white content-container">
           <div class="depositions-info">
             <h3 class="depositions-title">
-              Depoimentos de <span class="color-magenta">alunos</span>
+              <?php the_field('section_title_6nth') ?>
             </h3>
             <p class="depositions-text fs-title-lg">
-              Saiba o que os nossos alunos acharam sobre o programa!
+              <?php the_field('section_subtitle_6nth') ?>
             </p>
-            <a class="toodoo-button ghost fs-title-lg text-white text-decoration-none text-uppercase" href="#">
+            <a class="toodoo-button ghost fs-title-lg text-white text-decoration-none text-uppercase" href="<?php the_field('link_do_botao_depoimentos'); ?>">
               Clique e interaja
             </a>
           </div>
@@ -255,13 +266,11 @@
 
       </div>
     </section>
-
-
     <section class="section-doubts light-orbs">
       <div class="container">
         <div class="text-center">
           <h2 class="fs-display-md text-white fw-medium m-0">
-            Dúvidas
+            <?php the_field('section_title_7nth') ?>
           </h2>
         </div>
 
@@ -286,26 +295,23 @@
           </ul>
         <?php endif; ?>
 
-
         <div class="text-center text-white fs-title-lg">
           <figure class="m-0">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/rocket-icon.svg" alt="">
+            <img src="<?php echo esc_html(get_field('icone_duvidas')['url']) ?>" alt="<?php echo esc_html(get_field('icone_duvidas')['alt']) ?>">
           </figure>
           <p class="my-4 mb-sm-5">
-            Ainda possui dúvidas? Entre <br> em contato com a gente!
+            <?php the_field('texto_icone_duvidas');?>
           </p>
           <a class="toodoo-button text-decoration-none" href="#">Fale conosco</a>
         </div>
       </div>
     </section>
-
-
     <section class="section-participate">
       <div class="container">
         <div class="participate-card light-orbs fs-headline-lg bg-blur text-white text-center">
-          <p class="color-light-blue fw-bold mb-2">Faça parte</p>
+          <p class="color-light-blue fw-bold mb-2"><?php the_field('titulo_do_card_duvidas');?></p>
           <p class="">
-            Se você quer avançar no mundo da programação e não sabe por onde começar, o BlastOff é para você!
+          <?php the_field('texto_card_duvidas');?>
           </p>
         </div>
       </div>
