@@ -1535,6 +1535,7 @@ footer ul {
 }
 .page-blastoff .main .section-depositions .content-container .students-depositions .student-image {
   max-width: 407px;
+  min-height: 662px;
   position: relative;
 }
 .page-blastoff .main .section-depositions .content-container .students-depositions .student-image > img {
