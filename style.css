@@ -426,7 +426,7 @@ footer ul {
 }
 
 .header {
-  height: 72px;
+  height: 125px;
 }
 .header .header-mobile {
   display: flex;
@@ -964,6 +964,7 @@ footer ul {
   display: block;
   width: fit-content;
   text-decoration: none !important;
+  font-size: 18px;
 }
 
 .solution-section-texts {

@@ -26,8 +26,8 @@
   <section id="our-job">
     <div class="container py-5">
       <div class="our-job-heading text-center mb-5">
-        <h3 class="color-magenta">O que fazemos?</h3>
-        <h1 class="color-blue">Veja quais são os passos que seguimos</h1>
+        <h3 class="color-magenta"><?php echo the_field('step_card_pre_title'); ?></h3>
+        <h1 class="color-blue"><?php echo the_field('step_card_section_title'); ?></h1>
       </div>
       <div class="our-job-content mt-4">
         <div class="row">
@@ -49,7 +49,7 @@
 
                   // Display the values
                   echo '<div id="step-' . $index . '" class="step-card ' . $class . '">
-                                <img src="' . get_stylesheet_directory_uri() . '/public/assets/icons/' . $icon . '" />
+                                <img src="' . $icon . '" />
                                 <div class="step-card-description">
                                   <h6>' . $title . '</h6>
                                   <p>
@@ -85,7 +85,7 @@
 
   <section id="rocket-section" class="bg-blue">
     <div class="rocket-section container p-5">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/rocket-icon.svg" class="my-4" alt="Rocket icon" />
+      <img src="<?php echo the_field('rocket_icon'); ?>" class="my-4" alt="Rocket icon" />
       <p>
         <?php echo the_field('rocket_description'); ?>
       </p>
@@ -179,9 +179,9 @@
       <div class="row py-5">
         <div class="form-section-texts col-md-6 mb-5">
           <h1>
-            E aí, bora formar novos profissionais <strong>juntos?</strong>
+            <?php echo the_field('contact_form_title'); ?>
           </h1>
-          <p>Inscreva-se no formulário.</p>
+          <p><?php echo the_field('contact_form_subtitle'); ?></p>
         </div>
         <div class="col-md-6 d-flex align-items-center justify-content-center">
           <div class="toodoo-form">
@@ -199,7 +199,7 @@
           <h1>
             <?php echo the_field('vamos_conversar_titulo'); ?>
           </h1>
-          <a href="<?php echo the_field('vamos_conversar_link_botao_redirect'); ?>" class="toodoo-button mt-3 mb-5"><?php echo the_field('vamos_conversar_titulo_botao'); ?></a>
+          <a href="<?php echo the_field('vamos_conversar_link_botao_redirect'); ?>" class="toodoo-button mt-4 mb-5"><?php echo the_field('vamos_conversar_titulo_botao'); ?></a>
         </div>
         <div class="col-md-8 text-end d-none d-md-block">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-avatar.svg" alt="Mascote Toodoo" />
