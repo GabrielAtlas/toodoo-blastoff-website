@@ -964,6 +964,7 @@ footer ul {
   display: block;
   width: fit-content;
   text-decoration: none !important;
+  font-size: 18px;
 }
 
 .solution-section-texts {
