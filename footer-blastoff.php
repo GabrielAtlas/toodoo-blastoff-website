@@ -1,7 +1,7 @@
 <footer class="text-center text-lg-start text-white bg-blue">
   <section class="top-footer">
     <div class="container p-4 pb-0">
-      <img class="my-4" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-white-logo.png" width="150" height="30" alt="Toodoo Brand Logo" />
+      <img class="my-4" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-white-logo.png" width="150" height="30" alt="Toodoo Brand Logo" />
       <div class="row">
         <div class="col-md-3 col-lg-3 col-xl-3 mt-3">
           <ul class="list-unstyled card-columns p-0" data-columns="2">
@@ -24,16 +24,16 @@
             <p>NOSSAS REDES SOCIAIS</p>
             <ul class="d-flex gap-4 align-items-center list-unstyled py-2">
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/facebook.svg" alt="facebook" width="12" height="24" /></a>
+                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook" width="12" height="24" /></a>
               </li>
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/instagram.svg" alt="instagram" width="25" height="24" /></a>
+                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram" width="25" height="24" /></a>
               </li>
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/behance.svg" alt="behance" width="34" height="22" /></a>
+                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/behance.svg" alt="behance" width="34" height="22" /></a>
               </li>
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
+                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
               </li>
             </ul>
 
@@ -43,7 +43,7 @@
 
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <a href="#">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/go-up-icon.svg" alt="Arrow up" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/go-up-icon.svg" alt="Arrow up" />
             VOLTAR PARA O TOPO</a>
         </div>
       </div>
@@ -62,7 +62,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </div>
-<?php wp_footer(); ?>
+<!-- <?php wp_footer(); ?> -->
 </body>
 
 </html>

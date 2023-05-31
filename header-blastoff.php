@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+got <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php bloginfo('name'); ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="https://73p545.a2cdn1.secureserver.net/wp-content/uploads/2021/11/cropped-favicon-todoo-32x32.png" sizes="32x32" />
-  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/blastoff.js"></script>
-  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/responsive.js"></script>
+  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/blastoff.js"></script>
+  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/responsive.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <?php wp_head(); ?>
+  <!-- <?php wp_head(); ?> -->
 </head>
 
 <body>
@@ -25,28 +25,28 @@
               <li>
                 <a href="#">
                   <figure class="m-0">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/facebook.svg" alt="facebook">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook">
                   </figure>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <figure class="m-0">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/instagram.svg" alt="instagram">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram">
                   </figure>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <figure class="m-0">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/behance.svg" alt="behance">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/behance.svg" alt="behance">
                   </figure>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <figure class="m-0">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/linkedin.svg" alt="linkedin">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin">
                   </figure>
                 </a>
               </li>
@@ -54,7 +54,7 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <figure class="m-0">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/globe.svg" alt="globe">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe.svg" alt="globe">
             </figure>
             <select class="select-language cursor-pointer text-white" name="language" id="header-language">
               <option class="text-black" value="PT-BR">EN</option>
@@ -67,7 +67,7 @@
         <div class="container py-4 d-flex align-items-center justify-content-between">
           <a href="#">
             <figure class="m-0">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-pink-logo.svg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-pink-logo.svg" alt="">
             </figure>
           </a>
           <nav>
@@ -109,7 +109,7 @@
               Vem pra Toodoo
             </div>
             <figure class="m-0 d-flex align-content-center cursor-pointer">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/search-magenta.svg" alt="search">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/search-magenta.svg" alt="search">
             </figure>
           </div>
         </div>
@@ -118,20 +118,20 @@
     <section class="header-mobile fixed-top d-xl-none bg-white">
       <div class="header-mobile-bar d-flex justify-content-between align-items-center p-4">
         <figure class="image-logo m-0">
-          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-pink-logo.svg" alt="Toodoo">
+          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-pink-logo.svg" alt="Toodoo">
         </figure>
         <figure class="menu-image mobile-menu-button close m-0 cursor-pointer">
-          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/header-mobile-menu-close.svg" alt="menu">
+          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/header-mobile-menu-close.svg" alt="menu">
         </figure>
         <figure class="menu-image mobile-menu-button m-0 cursor-pointer">
-          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/header-mobile-menu.svg" alt="menu">
+          <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/header-mobile-menu.svg" alt="menu">
         </figure>
       </div>
       <nav class="header-mobile-menu">
         <div class="search-bar-container">
           <div class="search-bar">
             <figure class="m-0">
-              <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/search-magenta.svg" alt="pesquisa">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/search-magenta.svg" alt="pesquisa">
             </figure>
             <input type="text" placeholder="Buscar na toodoo">
           </div>
@@ -175,34 +175,34 @@
         <ul class="social-media-list list-unstyled">
           <li class="social-media-item">
             <figure>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/facebook-magenta.svg" alt="facebook">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook-magenta.svg" alt="facebook">
             </figure>
           </li>
           <li class="social-media-item">
             <figure>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/instagram-magenta.svg" alt="instagram">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram-magenta.svg" alt="instagram">
             </figure>
           </li>
           <li class="social-media-item">
             <figure>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/linkedin-magenta.svg" alt="linkedin">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin-magenta.svg" alt="linkedin">
             </figure>
           </li>
           <li class="social-media-item">
             <figure>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/twitter-magenta.svg" alt="twitter">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/twitter-magenta.svg" alt="twitter">
             </figure>
           </li>
           <li class="social-media-item">
             <figure>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/youtube-magenta.svg" alt="youtube">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/youtube-magenta.svg" alt="youtube">
             </figure>
           </li>
         </ul>
         <p class="color-magenta">Nos acompanhe</p>
         <div class="d-flex align-items-center justify-content-center gap-2 mx-auto">
           <figure class="m-0">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/globe-black.svg" alt="globe">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe-black.svg" alt="globe">
           </figure>
           <select class="select-language cursor-pointer text-white" name="language" id="header-language">
             <option class="text-black" value="PT-BR">EN</option>

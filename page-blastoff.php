@@ -1,7 +1,7 @@
 <?php
-// Template name: Blastoff
+// Template name: BlastoffAlunos
 ?>
-<?php get_header(); ?>
+<?php get_header('blastoff'); ?>
 <section class="bg-blue overflow-x-hidden page-blastoff">
   <main class="main overflow-hidden">
     <section class="section-project light-orbs">
@@ -22,7 +22,7 @@
             Scroll down
           </p>
           <figure class="scroll-down-button">
-            <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/icons/arrow-bottom-scrolldown.svg" alt="down">
+            <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/arrow-bottom-scrolldown.svg" alt="down">
           </figure>
         </div>
       </div>
@@ -230,7 +230,7 @@
               <div class="student-balloon-detail"></div>
             </div>
             <figure class="student-image">
-              <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/stundent-example.png" alt="">
             </figure>
           </div>
         </div>
@@ -318,4 +318,4 @@
     </section>
   </main>
 </section>
-<?php get_footer(); ?>
+<?php get_footer('blastoff'); ?>
