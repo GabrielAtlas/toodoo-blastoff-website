@@ -1,4 +1,5 @@
-got <!DOCTYPE html>
+got
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
