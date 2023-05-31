@@ -180,6 +180,31 @@ $third-color: map-get($map-colors, "blue");
   }
 }
 
+#feedback-section {
+  .feedback-content {
+    .owl-carousel {
+      padding-inline: 50px;
+    }
+    .owl-dots {
+      width: calc(100% - 100px);
+
+      .owl-dot {
+        span {
+          background-color: #090d68 !important;
+        }
+
+        &.active {
+          span {
+            background-color: #ea005a !important;
+            border-radius: 40px !important;
+            width: 16px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 .feedback-box {
   border: 2px solid #090d68;
   border-radius: 20px;
@@ -188,7 +213,6 @@ $third-color: map-get($map-colors, "blue");
   padding: 18px;
   padding-bottom: 14px;
   gap: 15px;
-  width: 500px;
 
   svg {
     position: absolute;
