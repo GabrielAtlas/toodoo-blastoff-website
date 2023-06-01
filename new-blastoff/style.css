@@ -426,7 +426,7 @@ footer ul {
 }
 
 .header {
-  height: 72px;
+  height: 125px;
 }
 .header .header-mobile {
   display: flex;
@@ -964,6 +964,7 @@ footer ul {
   display: block;
   width: fit-content;
   text-decoration: none !important;
+  font-size: 18px;
 }
 
 .solution-section-texts {
@@ -1081,7 +1082,7 @@ footer ul {
     margin-top: 125px;
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(odd):not(:first-child)::before {
-    content: url(./public/assets/images/about-lineway.svg);
+    content: url(https://toodoo.com.br/wp-content/uploads/2023/06/about-lineway.png);
     position: absolute;
     right: calc(50% - 8px);
     top: calc(-100% - 25px);
@@ -1089,7 +1090,7 @@ footer ul {
   }
   .page-blastoff .main .section-about .about-list .about-list-item:nth-child(even)::before {
     bottom: calc(-100% - 25px);
-    content: url(./public/assets/images/about-lineway.svg);
+    content: url(https://toodoo.com.br/wp-content/uploads/2023/06/about-lineway.png);
     position: absolute;
     right: calc(50% - 8px);
   }
@@ -1333,7 +1334,7 @@ footer ul {
   row-gap: 160px;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(1n+2) .process-secondary-item:first-child::before {
-  content: url("./public/assets/icons/process-item-line-dashed-top.svg");
+  content: url(https://toodoo.com.br/wp-content/uploads/2023/06/process-item-line-dashed-top.png);
   left: 50%;
   position: absolute;
   transform: translate(-50%, calc(-100% - 24px));
@@ -1343,7 +1344,7 @@ footer ul {
   flex-direction: row-reverse;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item:nth-child(2n+2) .process-secondary-list .process-secondary-item:nth-child(1n+2)::before {
-  content: url("./public/assets/icons/process-item-line-dashed.svg");
+  content: url(https://toodoo.com.br/wp-content/uploads/2023/06/process-item-line-dashed.png);
   display: block;
   left: 0;
   position: absolute;
@@ -1362,7 +1363,7 @@ footer ul {
   text-align: center;
 }
 .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-list .process-secondary-item:not(:nth-child(3n-2))::before {
-  content: url("./public/assets/icons/process-item-line-dashed.svg");
+  content: url(https://toodoo.com.br/wp-content/uploads/2023/06/process-item-line-dashed.png);
   display: block;
   position: absolute;
   right: 0;

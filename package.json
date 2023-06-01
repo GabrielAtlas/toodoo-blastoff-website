@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass -w sass:./" 
+    "sass": "sass -w sass:./new-blastoff" 
   },
   "author": "Gabriel, Lucas",
   "license": "ISC"
