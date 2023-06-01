@@ -1,7 +1,7 @@
 <?php
 // Template name: Blastoff-Empresas
 ?>
-<?php get_header(); ?>
+<?php get_header('blastoff'); ?>
 <main>
   <section id="branding-section" class="branding position-relative py-5">
     <div class="container d-flex justify-content-between pt-5">
@@ -18,7 +18,7 @@
       </div>
       <div class="position-relative">
         <div class="sorry-go-ahead d-none d-md-block"></div>
-        <img class="rounded" src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/gifs/empresas-1.gif" style="mix-blend-mode: soft-light" width="579" height="326" />
+        <img class="rounded" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/gifs/empresas-1.gif" style="mix-blend-mode: soft-light" width="579" height="326" />
       </div>
     </div>
   </section>
@@ -135,7 +135,7 @@
                 $visible = ($index === 0) ? '' : 'd-none';
 
                 echo '<div id="methodology-' . $index . '" class="d-flex align-items-start gap-3 ' . $visible . '">
-                                <img class="img-fluid" src="' . get_stylesheet_directory_uri() . '/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
+                                <img class="img-fluid" src="' . get_stylesheet_directory_uri() . '/new-blastoff/public/assets/images/toodoo-default-logo.svg" alt="Toodoo Logo" />
                                 <p>' . $description . '</p>
                               </div>';
               }
@@ -169,7 +169,7 @@
         </h1>
       </div>
       <div class="feedback-content mt-4">
-        <?php echo do_shortcode('[slide-anything id="34"]'); ?>
+        <?php echo do_shortcode('[slide-anything id="4720"]'); ?>
       </div>
     </div>
   </section>
@@ -185,7 +185,7 @@
         </div>
         <div class="col-md-6 d-flex align-items-center justify-content-center">
           <div class="toodoo-form">
-            <?php echo do_shortcode('[contact-form-7 id="35" title="Contact form 1"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="4739" title="Form Contato Blastoff Empresas"]'); ?>
           </div>
         </div>
       </div>
@@ -202,11 +202,11 @@
           <a href="<?php echo the_field('vamos_conversar_link_botao_redirect'); ?>" class="toodoo-button mt-4 mb-5"><?php echo the_field('vamos_conversar_titulo_botao'); ?></a>
         </div>
         <div class="col-md-8 text-end d-none d-md-block">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/assets/images/toodoo-avatar.svg" alt="Mascote Toodoo" />
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-avatar.svg" alt="Mascote Toodoo" />
         </div>
       </div>
     </div>
   </section>
 </main>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/empresas.js"></script>
-<?php get_footer(); ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/empresas.js"></script>
+<?php get_footer('blastoff'); ?>
