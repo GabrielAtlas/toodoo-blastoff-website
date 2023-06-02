@@ -218,19 +218,16 @@
             <div class="student-info">
               <div class="student-balloon">
                 <div class="student-information-container">
-                  <h3 class="fs-title-lg fw-bold">Emanuel (Swift – IOS / Mobile)</h3>
+                  <h3 class="fs-title-lg fw-bold"></h3>
                   <p class="student-text mb-1">
-                    Olá, sou o Emanuel Motta, da stack de SWIFT iOS e vim aqui falar um pouco de como está sendo a minha experiência no programa BlastOff, que é um oferecimento TooDoo.
-                    O programa tem sido muito legal, em todos os quesitos, gosto bastante dos métodos que são utilizados para nos
-                    Olá, sou o Emanuel Motta, da stack de SWIFT iOS e vim aqui falar um pouco de como está sendo a minha experiência no programa BlastOff, que é um oferecimento TooDoo.
-                    O programa tem sido muito legal, em todos os quesitos, gosto bastante dos métodos que são utilizados para nos
+
                   </p>
                 </div>
               </div>
               <div class="student-balloon-detail"></div>
             </div>
             <figure class="student-image">
-              <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/stundent-example.png" alt="">
+              <img class="w-100" src="<?php echo esc_html(get_field('depoimentos_mascote')['url']);?>" alt="<?php echo esc_html(get_field('depoimentos_mascote')['alt']);?>">
             </figure>
           </div>
         </div>
@@ -241,7 +238,7 @@
           <?php if (have_rows('depoimentos_de_alunos')) :
             while (have_rows('depoimentos_de_alunos')) : the_row(); ?>
 
-              <li class="students-list-item" data-list-item="<?php echo (get_row_index() - 1); ?>">
+              <li class="students-list-item <?php if(get_row_index() == 1):?> active <?php endif;?>" data-list-item="<?php echo (get_row_index() - 1); ?>">
                 <figure>
                   <img class="w-100" src="<?php the_sub_field('imagem') ?>" alt="<?php the_sub_field('nome') ?>">
                 </figure>
