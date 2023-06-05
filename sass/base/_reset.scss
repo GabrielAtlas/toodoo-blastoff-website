@@ -21,6 +21,8 @@ input[type="radio"]:focus {
     img {
       width: 65px !important;
       height: 65px !important;
+      min-width: 65px;
+      object-fit: cover;
     }
   }
 }

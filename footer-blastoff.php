@@ -64,5 +64,7 @@
 </div>
 <?php wp_footer(); ?>
 </body>
-
+<script>
+  $('#main-menu').remove();
+</script>
 </html>

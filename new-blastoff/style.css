@@ -179,6 +179,8 @@ input[type=radio]:focus {
 .owl-carousel .owl-item img {
   width: 65px !important;
   height: 65px !important;
+  min-width: 65px;
+  object-fit: cover;
 }
 
 .wpcf7-list-item {
