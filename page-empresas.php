@@ -12,7 +12,7 @@
         <p>
           <?php echo the_field('branding_description') ?>
         </p>
-        <a href="<?php echo the_field('branding_button'); ?>" class="toodoo-button ghost mb-5">SAIBA MAIS</a>
+        <a href="#form-section" class="toodoo-button ghost mb-5"><?php echo the_field('saiba_mais_button_label'); ?></a>
         <div class="i-cant-hear-you"></div>
         <div class="people-gif"></div>
       </div>
@@ -91,7 +91,7 @@
       </p>
       <div class="my-4">
         <a href="<?php echo the_field('rocket_button_link'); ?>" class="toodoo-button">
-          QUERO IMPULSIONAR MEU NEGÓCIO
+          <?php echo the_field('rocket_button_text'); ?>
         </a>
       </div>
     </div>
@@ -100,12 +100,10 @@
   <section id="methodology-section">
     <div class="container py-5">
       <div class="methodology-heading d-flex flex-column align-items-center justify-content-center text-center mb-5">
-        <h3 class="color-magenta">Metodologia</h3>
-        <h1 class="color-blue">Como esse profissional se desenvolverá?</h1>
+        <h3 class="color-magenta"><?php echo the_field('methodology_pre_title'); ?></h3>
+        <h1 class="color-blue"><?php echo the_field('methodology_title'); ?></h1>
         <p>
-          Os profissionais terão uma base sólida de lógica de programação,
-          metodologias ágeis e se desenvolverão numa linguagem e/ou
-          framework específico.
+          <?php echo the_field('methodology_description'); ?>
         </p>
         <div class="d-flex flex-nowrap overflow-auto text-nowrap mw-100 gap-3 mt-5" id="methodology-buttons">
 
@@ -163,9 +161,9 @@
   <section id="feedback-section">
     <div class="container py-5">
       <div class="feedback-heading d-flex flex-column align-items-center justify-content-center text-center mb-5">
-        <h3 class="color-magenta">Depoimentos</h3>
+        <h3 class="color-magenta"><?php echo the_field('depoimentos_title'); ?></h3>
         <h1 class="color-blue">
-          Saiba o que os nossos alunos acharam sobre o programa!
+          <?php echo the_field('depoimentos_descricao'); ?>
         </h1>
       </div>
       <div class="feedback-content mt-4">
