@@ -210,7 +210,7 @@
             <p class="depositions-text fs-title-lg">
               <?php the_field('section_subtitle_6nth') ?>
             </p>
-            <a class="toodoo-button ghost fs-title-lg text-white text-decoration-none text-uppercase" href="<?php the_field('link_do_botao_depoimentos'); ?>">
+            <a class="toodoo-button ghost fs-title-lg text-white text-decoration-none text-uppercase d-none" href="<?php the_field('link_do_botao_depoimentos'); ?>">
               Clique e interaja
             </a>
           </div>

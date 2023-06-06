@@ -36,8 +36,6 @@
                 <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
               </li>
             </ul>
-
-            <a class="toodoo-button">VEM PRA TOODOO</a>
           </div>
         </div>
 

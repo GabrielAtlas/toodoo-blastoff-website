@@ -12,6 +12,7 @@
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/blastoff.js?ref=0"></script>
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/responsive.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <?php wp_head()?>
 </head>
 
 <body>
@@ -103,14 +104,9 @@
               </li>
             </ul>
           </nav>
-          <div class="d-flex align-content-center gap-3">
-            <div class="toodoo-button ghost">
-              Vem pra Toodoo
-            </div>
-            <figure class="m-0 d-flex align-content-center cursor-pointer">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/search-magenta.svg" alt="search">
-            </figure>
-          </div>
+          <figure class="m-0 opacity-0">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-pink-logo.svg" alt="">
+          </figure>
         </div>
       </section>
     </section>
