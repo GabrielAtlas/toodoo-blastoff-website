@@ -219,6 +219,7 @@ Files inside this folder should contain all styles relating to a reusable compon
 
 .toodoo-form .input-wrapper {
   position: relative;
+  margin-bottom: 15px;
 }
 .toodoo-form .input-wrapper .label-title {
   display: block;
