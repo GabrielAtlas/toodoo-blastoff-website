@@ -199,8 +199,8 @@
           </h1>
           <a href="<?php echo the_field('vamos_conversar_link_botao_redirect'); ?>" class="toodoo-button mt-4 mb-5"><?php echo the_field('vamos_conversar_titulo_botao'); ?></a>
         </div>
-        <div class="col-md-8 text-end d-none d-md-block">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-avatar.svg" alt="Mascote Toodoo" />
+        <div class="col-md-7 text-end d-none d-md-block">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-avatar.svg?r=333" alt="Mascote Toodoo" />
         </div>
       </div>
     </div>
