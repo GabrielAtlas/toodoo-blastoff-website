@@ -429,6 +429,7 @@ footer ul {
 
 .header {
   height: 125px;
+  background-color: #090d68;
 }
 .header .header-mobile {
   display: flex;
@@ -1063,6 +1064,11 @@ footer ul {
     margin-bottom: 90px;
   }
 }
+@media screen and (max-width: 420px) {
+  .page-blastoff .main .section-information .div-container {
+    width: 100% !important;
+  }
+}
 .page-blastoff .main .section-information .text-container {
   max-width: 520px;
   min-width: 248px;
@@ -1074,6 +1080,11 @@ footer ul {
   max-width: 425px;
   min-width: 225px;
   width: 100%;
+}
+@media screen and (max-width: 420px) {
+  .page-blastoff .main .section-information .information-rocket {
+    display: none;
+  }
 }
 .page-blastoff .main .section-about {
   margin-bottom: 220px;
@@ -1122,7 +1133,7 @@ footer ul {
 }
 @media screen and (max-width: 1199px) {
   .page-blastoff .main .section-about .about-list .about-list-item:not(:first-child)::before {
-    content: url(./public/assets/icons/process-line-dashed-mobile.svg);
+    content: url(https://toodoo.com.br/wp-content/uploads/2023/06/process-line-dashed-mobile.png);
     left: 50%;
     position: absolute;
     top: 0;
@@ -1430,7 +1441,7 @@ footer ul {
     content: none !important;
   }
   .page-blastoff .main .section-process .process-primary-list .process-primary-item .process-secondary-item::after {
-    content: url("./public/assets/icons/process-line-dashed-mobile.svg");
+    content: url("https://toodoo.com.br/wp-content/uploads/2023/06/process-line-dashed-mobile.png");
     display: block;
     left: 50%;
     position: absolute;
@@ -1556,7 +1567,6 @@ footer ul {
 }
 .page-blastoff .main .section-depositions .content-container .students-depositions .student-image {
   max-width: 407px;
-  min-height: 662px;
   position: relative;
 }
 .page-blastoff .main .section-depositions .content-container .students-depositions .student-image > img {
@@ -1638,7 +1648,7 @@ footer ul {
 }
 .page-blastoff .main .section-depositions .list-container {
   position: relative;
-  top: -157px;
+  top: -74px;
   margin-bottom: 93px;
 }
 .page-blastoff .main .section-depositions .list-container .students-list {

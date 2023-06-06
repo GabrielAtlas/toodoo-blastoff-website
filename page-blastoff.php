@@ -29,7 +29,7 @@
     </section>
     <section class="section-information">
       <div class="container d-flex align-items-end align-items-md-center justify-content-between gap-4">
-        <div class="text-white w-50">
+        <div class="div-container text-white w-50">
           <h2 class="text-container fs-display-lg mb-3">
             <?php the_field('titulo_do_programa'); ?>
           </h2>
@@ -144,7 +144,7 @@
                     <p class="apprenticeship-item-info fs-title-lg">
                       <?php the_sub_field('conteudo') ?>
                     </p>
-                    <a class="toodoo-button text-decoration-none fw-bold" href="<?php the_sub_field('link'); ?>">Saiba mais</a>
+                    <a class="toodoo-button text-decoration-none fw-bold d-none" href="<?php the_sub_field('link'); ?>">Saiba mais</a>
                   </div>
                 </li>
             <?php endwhile;

@@ -40,17 +40,26 @@
       @include mediaMin(1200px) {
         margin-bottom: 90px;
       }
+      .div-container{
+        @include mediaMax(420px){
+          width: 100% !important;
+        }
+      }
       .text-container {
         max-width: 520px;
         min-width: 248px;
         &:nth-child(2) {
           min-width: 205px;
         }
+        @include mediaMax(420px)
       }
       & .information-rocket {
         max-width: 425px;
         min-width: 225px;
         width: 100%;
+        @include mediaMax(420px){
+          display: none;
+        }
       }
     }
     & .section-about {
@@ -100,7 +109,7 @@
           @include mediaMax(1199px) {
             &:not(:first-child) {
               &::before {
-                content: url(./public/assets/icons/process-line-dashed-mobile.svg);
+                content: url(https://toodoo.com.br/wp-content/uploads/2023/06/process-line-dashed-mobile.png);
                 left: 50%;
                 position: absolute;
                 top: 0;
@@ -418,7 +427,7 @@
                 content: none !important;
               }
               &::after {
-                content: url("./public/assets/icons/process-line-dashed-mobile.svg");
+                content: url("https://toodoo.com.br/wp-content/uploads/2023/06/process-line-dashed-mobile.png");
                 display: block;
                 left: 50%;
                 position: absolute;
@@ -546,7 +555,6 @@
           }
           & .student-image {
             max-width: 407px;
-            min-height: 662px;
             position: relative;
             & > img {
               display: block;
@@ -625,7 +633,7 @@
       }
       & .list-container {
         position: relative;
-        top: -157px;
+        top: -74px;
         margin-bottom: 93px;
         & .students-list {
           column-gap: 15px;
