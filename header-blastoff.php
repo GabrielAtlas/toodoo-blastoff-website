@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php bloginfo('name'); ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/style.css?ref=0" rel="stylesheet" type="text/css" />
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/style.css?ref=20" rel="stylesheet" type="text/css" />
   <link rel="icon" href="https://73p545.a2cdn1.secureserver.net/wp-content/uploads/2021/11/cropped-favicon-todoo-32x32.png" sizes="32x32" />
-  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/blastoff.js?ref=0"></script>
+  <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/blastoff.js?ref=20"></script>
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/responsive.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
