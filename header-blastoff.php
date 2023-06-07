@@ -24,14 +24,14 @@
           <div>
             <ul class="d-flex gap-2 align-items-center list-unstyled m-0 py-2">
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/toodoobr/">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook">
                   </figure>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram">
                   </figure>
@@ -45,7 +45,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin">
                   </figure>
