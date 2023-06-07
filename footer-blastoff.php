@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col-md-3 col-lg-3 col-xl-3 mt-3">
           <ul class="list-unstyled card-columns p-0" data-columns="2">
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Cases</a></li>
-            <li><a href="#">Blastoff</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="https://toodoo.com.br/sobre-nos/">Sobre</a></li>
+            <li><a href="https://toodoo.com.br/nosso-trabalho/">Serviços</a></li>
+            <li><a href="https://toodoo.com.br/cases/">Cases</a></li>
+            <li><a href="https://toodoo.com.br/academy-pt/">Blastoff</a></li>
+            <li><a href="https://toodoo.com.br/news/">News</a></li>
+            <li><a href="https://toodoo.com.br/contato/">Contato</a></li>
           </ul>
         </div>
 
@@ -24,16 +24,16 @@
             <p>NOSSAS REDES SOCIAIS</p>
             <ul class="d-flex gap-4 align-items-center list-unstyled py-2">
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook" width="12" height="24" /></a>
+                <a href="https://www.facebook.com/toodoobr/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook" width="12" height="24" /></a>
               </li>
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram" width="25" height="24" /></a>
+                <a href="https://www.instagram.com/toodoobr"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram" width="25" height="24" /></a>
               </li>
               <li>
                 <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/behance.svg" alt="behance" width="34" height="22" /></a>
               </li>
               <li>
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
+                <a href="https://www.linkedin.com/company/toodoobr"><img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin" width="24" height="24" /></a>
               </li>
             </ul>
           </div>
@@ -65,4 +65,5 @@
 <script>
   $('#main-menu').remove();
 </script>
+
 </html>
