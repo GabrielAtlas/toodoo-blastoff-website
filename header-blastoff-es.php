@@ -94,11 +94,13 @@ if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffC
             <figure class="m-0">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe.svg" alt="globe">
             </figure>
-            <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }>
-              <?php foreach ($urlObj as $key => $value) { ?>
-                <option class=" text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
-            <?php } ?>
-            </select>
+            <?php if ($urlObj) : ?>
+              <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }">
+                <?php foreach ($urlObj as $key => $value) { ?>
+                  <option class="text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
+                <?php } ?>
+              </select>
+            <?php endif ?>
           </div>
         </div>
       </section>
@@ -238,11 +240,13 @@ if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffC
           <figure class="m-0">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe-black.svg" alt="globe">
           </figure>
-          <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }>
-            <?php foreach ($urlObj as $key => $value) { ?>
-              <option class=" text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
-          <?php } ?>
-          </select>
+          <?php if ($urlObj) : ?>
+            <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }">
+              <?php foreach ($urlObj as $key => $value) { ?>
+                <option class="text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
+              <?php } ?>
+            </select>
+          <?php endif ?>
         </div>
       </nav>
     </section>
