@@ -1,7 +1,8 @@
 <?php
 // Template name: Blastoff-Empresas
+$current_language = (pll_current_language() == 'pt') ? false : pll_current_language();
 ?>
-<?php get_header('blastoff'); ?>
+<?php if ($current_language) : get_header('blastoff-' . $current_language);else : get_header('blastoff'); endif; ?>
 <main>
   <section id="branding-section" class="branding position-relative py-5">
     <div class="container d-flex justify-content-between pt-5">

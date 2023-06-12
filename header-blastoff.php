@@ -2,7 +2,7 @@
 $currentUrl = $_SERVER['REQUEST_URI'];
 
 $blastoffStudents = [
-  'PT' => '/blastoff-alunos/',
+  'PT' => '/blastoff/',
   'EN' => '/en/blastoff-students/',
   'ES' => '/es/blastoff-estudiantes/'
 ];
@@ -43,7 +43,7 @@ if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffC
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/blastoff.js?ref=20"></script>
   <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/js/responsive.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <?php do_action( 'wpseo_head' );?>
+  <?php do_action('wpseo_head'); ?>
 
 </head>
 
@@ -88,10 +88,10 @@ if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffC
             <figure class="m-0">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe.svg" alt="globe">
             </figure>
-            <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-            <?php foreach ($urlObj as $key => $value) {?>
-              <option class="text-black" value="<?php echo $value?>" onclick="this.value !== '' && (window.location.href = this.value)"><?php echo $key?></option>
-            <?php }?>
+            <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }">
+              <?php foreach ($urlObj as $key => $value) { ?>
+                <option class="text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
+              <?php } ?>
             </select>
           </div>
         </div>
@@ -232,10 +232,10 @@ if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffC
           <figure class="m-0">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe-black.svg" alt="globe">
           </figure>
-          <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-            <?php foreach ($urlObj as $key => $value) {?>
-              <option class="text-black" value="<?php echo $value?>" onclick="this.value !== '' && (window.location.href = this.value)"><?php echo $key?></option>
-            <?php }?>
+          <select class="select-language cursor-pointer text-white" name="language" id="header-language" onchange="if (this.value !== '') { window.location.href = this.value; }>
+            <?php foreach ($urlObj as $key => $value) { ?>
+              <option class="text-black" value="<?php echo $value ?>"><?php echo $key ?></option>
+            <?php } ?>
           </select>
         </div>
       </nav>

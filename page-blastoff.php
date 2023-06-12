@@ -2,9 +2,7 @@
 // Template name: BlastoffAlunos
 $current_language = (pll_current_language() == 'pt') ? false : pll_current_language();
 ?>
-<?php if ($current_language) : get_header('blastoff-' . $current_language);
-else : get_header('blastoff');
-endif; ?>
+<?php if ($current_language) : get_header('blastoff-' . $current_language);else : get_header('blastoff'); endif; ?>
 
 <section class="bg-blue overflow-x-hidden page-blastoff">
   <main class="main overflow-hidden">
