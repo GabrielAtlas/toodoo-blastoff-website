@@ -24,14 +24,14 @@
           <div>
             <ul class="d-flex gap-2 align-items-center list-unstyled m-0 py-2">
               <li>
-                <a href="https://www.facebook.com/toodoobr/">
+                <a href="https://www.facebook target="__blank".com/toodoobr/">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook">
                   </figure>
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/toodoobr">
+                <a href="https://www.instagram target="__blank".com/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram">
                   </figure>
@@ -45,7 +45,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/toodoobr">
+                <a href="https://www.linkedin.com target="__blank"/company/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin">
                   </figure>
@@ -74,7 +74,7 @@
           <nav>
             <ul class="list-unstyled d-flex gap-5 m-0 fw-medium text-uppercase">
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/sobre-nos/" target="__blank">
                   Sobre
                 </a>
               </li>
@@ -84,7 +84,7 @@
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/cases/" target="__blank">
                   Cases
                 </a>
               </li>
@@ -94,12 +94,12 @@
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/news/" target="__blank">
                   News
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/contato/" target="__blank">
                   Contato
                 </a>
               </li>
@@ -134,13 +134,13 @@
         </div>
         <ul class="header-mobile-list list-unstyled">
           <li class="mobile-menu-item">
-            <a href="#">Sobre</a>
+            <a href="https://toodoo.com.br/sobre-nos/" target="__blank">Sobre</a>
           </li>
           <li class="mobile-menu-item">
             <a href="#">Serviços</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#">Cases</a>
+            <a href="https://toodoo.com.br/cases/" target="__blank">Cases</a>
           </li>
           <li class="mobile-menu-item">
             <div class="accordion accordion-flush" id="navigation-menu-option-blastoff">
@@ -162,10 +162,10 @@
             </div>
           </li>
           <li class="mobile-menu-item">
-            <a href="#">News</a>
+            <a href="https://toodoo.com.br/news/" target="__blank">News</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#">Contato</a>
+            <a href="https://toodoo.com.br/contato/" target="__blank">Contato</a>
           </li>
         </ul>
         <ul class="social-media-list list-unstyled">
