@@ -1,7 +1,11 @@
 <?php
 // Template name: BlastoffAlunos
+$current_language = (pll_current_language() == 'pt') ? false : pll_current_language();
 ?>
-<?php get_header('blastoff'); ?>
+<?php if ($current_language) : get_header('blastoff-' . $current_language);
+else : get_header('blastoff');
+endif; ?>
+
 <section class="bg-blue overflow-x-hidden page-blastoff">
   <main class="main overflow-hidden">
     <section class="section-project light-orbs">
@@ -227,7 +231,7 @@
               <div class="student-balloon-detail"></div>
             </div>
             <figure class="student-image">
-              <img class="w-100" src="<?php echo esc_html(get_field('depoimentos_mascote')['url']);?>" alt="<?php echo esc_html(get_field('depoimentos_mascote')['alt']);?>">
+              <img class="w-100" src="<?php echo esc_html(get_field('depoimentos_mascote')['url']); ?>" alt="<?php echo esc_html(get_field('depoimentos_mascote')['alt']); ?>">
             </figure>
           </div>
         </div>
@@ -238,7 +242,7 @@
           <?php if (have_rows('depoimentos_de_alunos')) :
             while (have_rows('depoimentos_de_alunos')) : the_row(); ?>
 
-              <li class="students-list-item <?php if(get_row_index() == 1):?> active <?php endif;?>" data-list-item="<?php echo (get_row_index() - 1); ?>">
+              <li class="students-list-item <?php if (get_row_index() == 1) : ?> active <?php endif; ?>" data-list-item="<?php echo (get_row_index() - 1); ?>">
                 <figure>
                   <img class="w-100" src="<?php the_sub_field('imagem') ?>" alt="<?php the_sub_field('nome') ?>">
                 </figure>
@@ -297,7 +301,7 @@
             <img src="<?php echo esc_html(get_field('icone_duvidas')['url']) ?>" alt="<?php echo esc_html(get_field('icone_duvidas')['alt']) ?>">
           </figure>
           <p class="my-4 mb-sm-5">
-            <?php the_field('texto_icone_duvidas');?>
+            <?php the_field('texto_icone_duvidas'); ?>
           </p>
           <a class="toodoo-button text-decoration-none" href="#">Fale conosco</a>
         </div>
@@ -306,9 +310,9 @@
     <section class="section-participate">
       <div class="container">
         <div class="participate-card light-orbs fs-headline-lg bg-blur text-white text-center">
-          <p class="color-light-blue fw-bold mb-2"><?php the_field('titulo_do_card_duvidas');?></p>
+          <p class="color-light-blue fw-bold mb-2"><?php the_field('titulo_do_card_duvidas'); ?></p>
           <p class="">
-          <?php the_field('texto_card_duvidas');?>
+            <?php the_field('texto_card_duvidas'); ?>
           </p>
         </div>
       </div>

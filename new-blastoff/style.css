@@ -1742,4 +1742,8 @@ footer ul {
   }
 }
 
+#wpadminbar {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

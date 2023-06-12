@@ -1,3 +1,34 @@
+<?php
+$currentUrl = $_SERVER['REQUEST_URI'];
+
+$blastoffStudents = [
+  'PT' => '/blastoff-alunos/',
+  'EN' => '/en/blastoff-students/',
+  'ES' => '/es/blastoff-estudiantes/'
+];
+
+$blastoffCompanies = [
+  'PT' => '/blastoff-empresas/',
+  'EN' => '/en/blastoff-companies/',
+  'ES' => '/es/es-blastoff-empresas/'
+];
+
+if (in_array($currentUrl, $blastoffStudents) || in_array($currentUrl, $blastoffCompanies)) {
+  $urlObj = new stdClass();
+
+  if (in_array($currentUrl, $blastoffStudents)) {
+    $urlObj->PT = $blastoffStudents['PT'];
+    $urlObj->EN = $blastoffStudents['EN'];
+    $urlObj->ES = $blastoffStudents['ES'];
+  } else {
+    $urlObj->PT = $blastoffCompanies['PT'];
+    $urlObj->ES = $blastoffCompanies['ES'];
+    $urlObj->EN = $blastoffCompanies['EN'];
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,14 +55,14 @@
           <div>
             <ul class="d-flex gap-2 align-items-center list-unstyled m-0 py-2">
               <li>
-                <a href="https://www.facebook target="__blank".com/toodoobr/">
+                <a href="https://www.facebook.com/toodoobr/">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/facebook.svg" alt="facebook">
                   </figure>
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram target="__blank".com/toodoobr">
+                <a href="https://www.instagram.com/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/instagram.svg" alt="instagram">
                   </figure>
@@ -45,7 +76,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com target="__blank"/company/toodoobr">
+                <a href="https://www.linkedin.com/company/toodoobr">
                   <figure class="m-0">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/linkedin.svg" alt="linkedin">
                   </figure>
@@ -58,15 +89,16 @@
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe.svg" alt="globe">
             </figure>
             <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-              <option class="text-black" value="PT-BR">EN</option>
-              <option class="text-black" value="PT-BR">PT-BR</option>
+            <?php foreach ($urlObj as $key => $value) {?>
+              <option class="text-black" value="<?php echo $value?>" onclick="this.value !== '' && (window.location.href = this.value)"><?php echo $key?></option>
+            <?php }?>
             </select>
           </div>
         </div>
       </section>
       <section class="bg-white container-fluid">
         <div class="container py-4 d-flex align-items-center justify-content-between">
-          <a href="#">
+          <a href="https://toodoo.com.br/nosso-trabalho/">
             <figure class="m-0">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/images/toodoo-pink-logo.svg" alt="">
             </figure>
@@ -74,32 +106,32 @@
           <nav>
             <ul class="list-unstyled d-flex gap-5 m-0 fw-medium text-uppercase">
               <li>
-                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/sobre-nos/" target="__blank">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/sobre-nos/">
                   Sobre
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="#">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/nosso-trabalho/">
                   Serviços
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/cases/" target="__blank">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/cases/">
                   Cases
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="/blastoff">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/blastoff-alunos/">
                   Blastoff
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/news/" target="__blank">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/news/">
                   News
                 </a>
               </li>
               <li>
-                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/contato/" target="__blank">
+                <a class="color-blue text-decoration-none" href="https://toodoo.com.br/contato/">
                   Contato
                 </a>
               </li>
@@ -134,13 +166,13 @@
         </div>
         <ul class="header-mobile-list list-unstyled">
           <li class="mobile-menu-item">
-            <a href="https://toodoo.com.br/sobre-nos/" target="__blank">Sobre</a>
+            <a href="https://toodoo.com.br/sobre-nos/">Sobre</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#">Serviços</a>
+            <a href="https://toodoo.com.br/nosso-trabalho/">Serviços</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="https://toodoo.com.br/cases/" target="__blank">Cases</a>
+            <a href="https://toodoo.com.br/cases/">Cases</a>
           </li>
           <li class="mobile-menu-item">
             <div class="accordion accordion-flush" id="navigation-menu-option-blastoff">
@@ -153,8 +185,8 @@
                 <div id="navigation-option-blastoff" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#navigation-menu-option-blastoff">
                   <div class="accordion-body">
                     <ul class="list-unstyled">
-                      <li><a href="#"> Para aluno </a></li>
-                      <li><a href="#"> Para empresas </a></li>
+                      <li><a href="https://toodoo.com.br/blastoff-alunos/"> Para aluno </a></li>
+                      <li><a href="https://toodoo.com.br/blastoff-empresas/"> Para empresas </a></li>
                     </ul>
                   </div>
                 </div>
@@ -162,10 +194,10 @@
             </div>
           </li>
           <li class="mobile-menu-item">
-            <a href="https://toodoo.com.br/news/" target="__blank">News</a>
+            <a href="https://toodoo.com.br/news/">News</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="https://toodoo.com.br/contato/" target="__blank">Contato</a>
+            <a href="https://toodoo.com.br/contato/">Contato</a>
           </li>
         </ul>
         <ul class="social-media-list list-unstyled">
@@ -201,8 +233,9 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/new-blastoff/public/assets/icons/globe-black.svg" alt="globe">
           </figure>
           <select class="select-language cursor-pointer text-white" name="language" id="header-language">
-            <option class="text-black" value="PT-BR">EN</option>
-            <option class="text-black" value="PT-BR">PT-BR</option>
+            <?php foreach ($urlObj as $key => $value) {?>
+              <option class="text-black" value="<?php echo $value?>" onclick="this.value !== '' && (window.location.href = this.value)"><?php echo $key?></option>
+            <?php }?>
           </select>
         </div>
       </nav>
